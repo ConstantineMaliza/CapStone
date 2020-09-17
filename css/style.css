@@ -7,6 +7,9 @@ body{
     
     
 }
+section{
+    height: 100vh;
+}
 .container{
     display: block;
     margin-left: auto;
@@ -15,19 +18,25 @@ body{
 }
 a{
     text-decoration: none;
-    color: #E5E5E5;
+    
 }
+
 
 .nav-link:hover{
     background-color: #7F150B;
+    color: white;
+    font-weight: 600;
 }
 .navbar{
-    background-color: black;
+    background-color: rgb(231, 230, 230);
+    position: fixed;
+    top:0;
+    width: 100%;
     overflow: hidden;
 }
 .navbar a{
   display: block;
-  color: #bebebe;
+  color: #C02011;
   text-align: center;
   align-items: center;
   text-decoration: none;
@@ -51,6 +60,9 @@ a{
     width: 60px;
     padding-left: 10%;
 }
+.main{
+    margin-top: 10%;
+}
 .wrapper{
     padding: 10% 10% 0 10%;
 }
@@ -70,6 +82,10 @@ a{
     display: flex;
     justify-content: center;
     padding-top: 10px;
+    
+}
+.view a{
+    color: #E5E5E5;
 }
 .wrapper h1{
     font-size: 40px;
@@ -90,7 +106,7 @@ a{
 .footer{
     left: 0;
     bottom: 0;
-    background-color: black;
+    background-color: rgb(231, 230, 230);
     display: flex;
     justify-content: center;
     position: fixed;
@@ -105,6 +121,7 @@ a{
 }
 .footer li a{
     padding: 20px;
+    color: #C02011;
 }
 .footer img{
     height: 20px;

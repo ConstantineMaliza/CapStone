@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto ;
+  padding: 10px;
+}
+
+.grid-item {
+  padding: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+.grid-item img{
+    height: 300px;
+    width: 600px;
+    object-fit: cover;
+}
+.grid-item .description{
+    color: white;
+    font-size: 17px;
+    line-height: 30px;
+}
+.grid-item .comments{
+    background-color:#E5E5E5;
+    height: auto;
+    width: 400px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    
+}
+.grid-item .usercomments p{
+    font-style: italic;
+}
+.grid-item .usercomments{
+    padding-bottom: 10px;
+}
+.grid-item form a{
+    color: white;
+    border:1px solid #E5E5E5;
+    background-color: #C02011;
+    padding: 5px;
+    border-radius: 10px;
+    
+    
+}
+
+</style>
+<body style="background: rgba(1, 8, 18, 0.96);">
+    <div class="navbar">
+        <div class="container">
+        <img src="assets/logo.png" alt="">
+
+        <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="#"><img src="assets/facebook.png" alt="" style="height: 20px; width: 20px;"></a></li>
+            <li><a href="#"><img src="assets/twitter.png" alt=""  style="height: 20px; width: 20px;"></a></li>
+        </ul>
+    </div>
+    </div>
+    <div class="main">
+        <section class="container">
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="assets/blog_art_1.jpg" alt="">
+                    <div class="container"> 
+                        <div class="description">
+                            <h5>Breaking Your Coder's Block</h5>
+                            <p>
+                                At one time or another, as a developer, 
+                                we've all found ourselves hopelessly stuck on a coding issue...
+                            </p>
+                        </div>                      
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="comments">
+                        <h4>Comments</h4>
+                        <div class=" container usercomments">
+                            <h5>Peter</h5>
+                            <p>
+                                " this scenario happend to me also when I was deal with backend configuration "
+                            </p>
+                        </div>
+                        <br>
+                        <form action="">
+                            <p>Leave Message</p>
+                            <textarea name="" id="" style="width: 300px;"></textarea><br><br>
+                            <a href="">Send</a>
+                        </form>
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+    </div>
+    
+</body>
+</html>
