@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,400;1,600;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            margin: 0;
+
+        }
+
+        .sidebar {
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .sidebar a.active {
+            background-color: rgb(168, 9, 9);
+            color: white;
+        }
+
+        .sidebar a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+
+        div.content {
+            margin-left: 200px;
+            padding: 1px 16px;
+            height: 1000px;
+        }
+
+        table {
+            color: white;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #313030;
+        }
+
+        td img {
+            height: 100px;
+            width: 100px;
+            object-fit: cover;
+        }
+
+        td a {
+            color: #dddddd;
+        }
+
+        tr:hover {
+            background-color: rgb(121, 28, 28);
+        }
+
+        tr th {
+            background-color: rgb(121, 28, 28);
+        }
+
+        @media screen and (max-width: 700px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .sidebar a {
+                float: left;
+            }
+
+            div.content {
+                margin-left: 0;
+            }
+
+            .navbar .nav-link {
+                display: none;
+            }
+
+
+        }
+
+        @media screen and (max-width: 400px) {
+            .sidebar a {
+                text-align: center;
+                float: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <img src="assets/logo.png" alt="" style="margin-left: 5%;">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link">Login</a></li>
+                <li><a href="" class="" id="">Username</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar">
+            <a class="active" href="adminCreateBlog.html">Create Blog</a>
+            <a href="adminUpdateBlog.html">Update Blog</a>
+            <a href="adminViewBlog.html">View Blog</a>
+            <hr>
+            <a href="#logout">Logout</a>
+        </div>
+        <div class="content" style="background: rgba(1, 8, 18, 0.96);">
+            <div style="text-align: center;padding:10px 0 10px 0">
+                <h1 style="color: white">View Blog</h1>
+            </div>
+            <table>
+                <tr>
+                    <th>N0</th>
+                    <th>Blog Photo</th>
+                    <th>Title </th>
+                    <th>Description</th>
+                    <th>Control</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><img src="assets/blog_art_1.jpg" alt="" srcset=""></td>
+                    <td>Breaking Your Coder's Block</td>
+                    <td>At one time or another, as a developer,
+                        we've all found ourselves hopelessly stuck on a coding issue
+                    </td>
+                    <td>
+                        <a href="">delete</a>
+                        <a href="">Update</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src="assets/blog_art_1.jpg" alt="" srcset=""></td>
+                    <td>Breaking Your Coder's Block</td>
+                    <td>At one time or another, as a developer,
+                        we've all found ourselves hopelessly stuck on a coding issue
+                    </td>
+                    <td>
+                        <a href="">delete</a>
+                        <a href="">Update</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><img src="assets/blog_art_1.jpg" alt="" srcset=""></td>
+                    <td>Breaking Your Coder's Block</td>
+                    <td>At one time or another, as a developer,
+                        we've all found ourselves hopelessly stuck on a coding issue
+                    </td>
+                    <td>
+                        <a href="">delete</a>
+                        <a href="">Update</a>
+                    </td>
+                </tr>
+            </table>
+
+
+
+        </div>
+
+</body>
+
+</html>

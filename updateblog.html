@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update blog</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,400;1,600;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        background-color: rgb(253, 253, 253);
+        padding: 10px;
+    }
+
+    .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        /* border: 1px solid rgba(0, 0, 0, 0.8); */
+        padding: 20px;
+        text-align: center;
+        width: 80%;
+    }
+
+    .grid-item .card-header {
+        background-color: brown;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: rgb(221, 212, 212);
+        height: 50px;
+    }
+
+    .card img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .body input,
+    textarea {
+        width: 600px;
+    }
+
+    .col-8 {
+        width: 600px;
+    }
+
+    .col-4 {
+        width: 300px;
+    }
+
+    .submit a {
+        border: 1px solid brown;
+        padding: 20px 100px 20px 100px;
+        margin-left: 130%;
+    }
+
+    .submit a:hover {
+        color: #ffffff;
+        background-color: brown;
+    }
+</style>
+
+<body style="background: rgba(1, 8, 18, 0.96);">
+    <div class="navbar">
+        <div class="container">
+            <img src="assets/logo.png" alt="" style="margin-left: 5%;">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link">Login</a></li>
+                <li><a href="" class="" id="">Username</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+
+    </div>
+    <section class="main container">
+        <form action="">
+            <div class="grid-container">
+                <div class="grid-item col-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Upload Blog Image</h4>
+                            <input type="file" name="" id="" style="margin-left: 10px;">
+                        </div>
+                        <div class="card-body">
+                            <img src="assets/blog_art_1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item col-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Detail Information</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="body">
+                                <label for="">Title of blog</label><br>
+                                <input type="text" name="" id="" placeholder="Breaking Your Coder's Block"
+                                    style="border-radius: 5px;"><br>
+                                <label for="">Description</label><br>
+                                <textarea name="" id="" cols="30" rows="4"
+                                    placeholder="At one time or another, as a developer,we've all found ourselves hopelessly stuck on a coding issue.."
+                                    style="border-radius: 5px;"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item submit">
+                    <a href="">Publish</a>
+                </div>
+            </div>
+        </form>
+
+    </section>
+
+</body>
+
+</html>

@@ -28,7 +28,7 @@ a{
     font-weight: 600;
 }
 .navbar{
-    background-color: rgb(231, 230, 230);
+    background-color: rgb(253, 253, 253);
     position: fixed;
     top:0;
     width: 100%;
@@ -48,8 +48,8 @@ a{
     float: right;
 }
 .navbar img{
-    height: 60px;
-    width: 60px;
+    
+    margin-top: 2px;
 }
 .navbar li a{
     padding: 20px;
@@ -171,6 +171,9 @@ li {
     transition: all 0.3 ease;
     cursor: pointer;
   }
+  .form a{
+      color: white;
+  }
   .form button:hover,.form button:active,.form button:focus {
     background: #8a160c;
   }
@@ -182,6 +185,9 @@ li {
   .form .message a {
     color: #C02011;
     text-decoration: none;
+  }
+  .navbar #username, #dropdown{
+      display: none;
   }
   
   
