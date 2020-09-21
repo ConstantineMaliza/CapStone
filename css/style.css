@@ -282,6 +282,7 @@ a{
 li {
  list-style: none;
 }
+
 .login-page {
     width: 360px;
     padding: 3% 0 0;
@@ -447,7 +448,9 @@ li {
   .contact-form {
     max-width:  360px;
  }
-  
+  .main{
+      margin-top: 30%;
+  }
   
 }
   
