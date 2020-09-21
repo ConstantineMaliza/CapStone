@@ -75,17 +75,51 @@ a{
     padding: 10% 10% 0 10%;
     margin-top: 10%;
 }
-.wrapper-contact form {
-    color: #E5E5E5;
-}
-.wrapper-contact label,input,textarea,button{
+.contact-page {
     width: 500px;
-    line-height: 30px;
-}
-.wrapper-contact {
-    display: flex;
-    justify-content: center;
-}
+    padding: 3% 0 0;
+    margin: auto;
+  }
+  .contact-form {
+    z-index: 1;
+    background: #e0e0e0;
+    max-width:  500px;
+    /* margin: 0 auto 100px; */
+    padding: 45px;
+    /* text-align: center; */
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  .contact-form input , textarea {
+    outline: 0;
+    background: #ffffff;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  .contact-form button {
+  
+    text-transform: uppercase;
+    outline: 0;
+    background: #a81c0f;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+  }
+  .contact-form a{
+      color: white;
+  }
+  .contact-form button:hover,.form button:active,.form button:focus {
+    background: #8a160c;
+  }
+ 
 
 .view{
     display: flex;
@@ -219,22 +253,26 @@ a{
 .footer{
     left: 0;
     bottom: 0;
-    background-color: rgb(231, 230, 230);
+    background-color: rgb(135, 151, 241);
     display: flex;
     justify-content: center;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     height: 10vh;
 }
 .footer ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 80%;
 }
 .footer li a{
     padding: 20px;
-    color: #C02011;
+   
+}
+.footer a:hover{
+   background-color: #ffffff;
+   color: #1171c0;
 }
 .footer img{
     height: 20px;
@@ -250,7 +288,7 @@ li {
     margin: auto;
   }
   .form {
-    position: relative;
+   
     z-index: 1;
     background: #FFFFFF;
     max-width: 360px;
@@ -400,6 +438,15 @@ li {
 .blog{
     padding-top: 30%;
 }
+#contact h1{
+    padding-top: 25%;
+}
+.contact-page {
+    width: 360px;
+  }
+  .contact-form {
+    max-width:  360px;
+ }
   
   
 }
