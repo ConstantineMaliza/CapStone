@@ -8,6 +8,12 @@
 section{
     height: 100vh;
 }
+section:nth-child(odd) {
+    background: rgba(1, 8, 18, 0.96);
+  }
+section:nth-child(even) {
+    background: rgba(226, 226, 226, 0.96);
+  }
 
 .container{
     display: block;
@@ -130,7 +136,22 @@ a{
 }
 .about1 .col-4 h5{
     font-size: 20px;
-}
+}.about2 .col-4 {
+    padding: 20px;
+    text-align: center;
+  }
+  .about2 .aboutme{
+      background-color: white;
+      color: black;
+      height: 400px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 20px;
+  }
+  .about2 .col-8 img{
+      height: 400px;
+      width: 600px;
+  }
 .footer{
     left: 0;
     bottom: 0;
@@ -229,51 +250,7 @@ li {
     padding: 15px;
   }
   
-  @media screen and (max-width:800px) {
-      section{
-          height: auto;
-      }
-    .container{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width:100%;
-    }
-    .navbar .logo{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .navbar ul{width: 100%;
-    background-color: rgb(255, 255, 255);
-    }
-     .navbar li img{
-         display: none;
-     }
-     .wrapper{
-         margin-top: 20%;
-         padding-bottom: 100px;
-     }
-     .wrapper h1{
-        font-size: 30px;
-        text-align: center;
-        color: white;
-    }
-    .wrapper h1 span{
-        font-size: 35px;
-        color:#C02011;
-    }
-    .about1{
-        padding-top: 30%;
-    }
-    .about1 .col-4 img{
-        height: 150px;
-        width: 150px;
-    }
-   
-   
-     
-  }
+ 
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%;
@@ -310,5 +287,54 @@ li {
     .col-12 {width: 100%;}
  
   }
-  
+  @media screen and (max-width:800px) {
+    section{
+        height: auto;
+    }
+  .container{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width:100%;
+  }
+  .navbar .logo{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  }
+  .navbar ul{width: 100%;
+  background-color: rgb(255, 255, 255);
+  }
+   .navbar li img{
+       display: none;
+   }
+   .wrapper{
+       margin-top: 20%;
+       padding-bottom: 100px;
+   }
+   .wrapper h1{
+      font-size: 30px;
+      text-align: center;
+      color: white;
+  }
+  .wrapper h1 span{
+      font-size: 35px;
+      color:#C02011;
+  }
+  .about1{
+      padding-top: 30%;
+  }
+  .about1 .col-4 img{
+      height: 150px;
+      width: 150px;
+  }
+
+  .about2 .col-8 img{
+      height: 300px;
+      width: 400px;
+  }
+ 
+ 
+   
+}
   
