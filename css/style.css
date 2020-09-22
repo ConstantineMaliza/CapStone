@@ -369,6 +369,37 @@ li {
     margin-right: 0;
     width: 100%;
   }
+  .updateblog {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+  }
+  .updateblog .card-header h4{
+    background-color:  rgb(81, 81, 223);
+    padding: 10px;
+    color: #ffffff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .updateblog input , textarea {
+    outline: 0;
+    background: #f3f3f3;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  .updateblog .card-body img{
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
   .submit a{
     background-color: #1171c0;
     padding: 20px;
@@ -383,7 +414,40 @@ li {
   .navbar #username, #dropdown{
       display: none;
   }
+.table{
+  overflow-x: auto;
+  padding: 20px;
 
+}
+table {
+  color: white;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #313030;
+}
+td img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+td a{
+    color: #dddddd;
+}
+tr:hover{
+    background-color: rgb(121, 28, 28);
+}
+tr th{
+    background-color: rgb(121, 28, 28);
+}
   .row::after {
     content: "";
     clear: both;
@@ -493,6 +557,7 @@ li {
   .main{
       margin-top: 30%;
   }
-  
+  .table{
+    overflow-x: auto;
+  }
 }
-  

@@ -1,113 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Blog</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,400;1,600;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Blog</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,400;1,600;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <style>
-    table {
-      color: white;
-      border-collapse: collapse;
-      width: 100%;
-    }
-    
-    td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
-    
-    tr:nth-child(even) {
-      background-color: #313030;
-    }
-    td img{
-        height: 100px;
-        width: 100px;
-        object-fit: cover;
-    }
-    td a{
-        color: #dddddd;
-    }
-    tr:hover{
-        background-color: rgb(121, 28, 28);
-    }
-    tr th{
-        background-color: rgb(121, 28, 28);
-    }
-    </style>
-<body style="background: rgba(1, 8, 18, 0.96);">
-    <div class="navbar">
-        <div class="container">
+
+</style>
+
+<body>
+  <div class="navbar">
+    <div class="container">
+      <div class="logo">
         <img src="assets/logo.png" alt="">
+      </div>
 
-        <ul>
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="blog.html" class="nav-link">Blog</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
-            <li><a href="login.html" class="nav-link">Login</a></li>
-            <li><a href="#"><img src="assets/facebook.png" alt="" style="height: 20px; width: 20px;"></a></li>
-            <li><a href="#"><img src="assets/twitter.png" alt=""  style="height: 20px; width: 20px;"></a></li>
-        </ul>
-    </div>
-    </div>
-    <div class="main">
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="createblog.html" class="nav-link">Create Blog</a></li>
+        <li><a href="viewblog.html" class="nav-link">View Blog</a></li>
+        <li><a href="" class="" id="">Username</a></li>
+        <li><a href="" class="" id="">Logout</a></li>
 
+      </ul>
     </div>
-    <section class="main container">
-        <div style="text-align: center;padding:10px 0 10px 0">
-            <h1 style="color: white">View Blog</h1>
-        </div>
-        <table>
-            <tr>
-              <th>N0</th>
-              <th>Blog Photo</th>
-              <th>Title </th>
-              <th>Description</th>
-              <th>Control</th>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td><img src="assets/blog_art_1.jpg" alt="" srcset=""></td>
-              <td>Breaking Your Coder's Block</td>
-              <td>At one time or another, as a developer, 
-                we've all found ourselves hopelessly stuck on a coding issue
-                </td>
-              <td>
-                  <a href="">delete</a>
-                  <a href="">Update</a>
-            </td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td><img src="assets/blog_art_1.jpg" alt="" srcset=""></td>
-              <td>Breaking Your Coder's Block</td>
-              <td>At one time or another, as a developer, 
-                we've all found ourselves hopelessly stuck on a coding issue
-                </td>
-                <td>
-                    <a href="">delete</a>
-                    <a href="">Update</a>
-              </td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td><img src="assets/blog_art_1.jpg" alt="" srcset=""></td>
-              <td>Breaking Your Coder's Block</td>
-              <td>At one time or another, as a developer, 
-                we've all found ourselves hopelessly stuck on a coding issue
-                </td>
-                <td>
-                    <a href="">delete</a>
-                    <a href="">Update</a>
-              </td>
-            </tr>
-          </table>
+  </div>
+  <div class="main">
 
-</section>
-    
+  </div>
+  <section class="table">
+    <div class="container">
+      <div style="text-align: center;padding:10px 0 10px 0;margin-top: 7%;">
+        <h1 style="color: white">View Blog</h1>
+      </div>
+      <table>
+        <thead>
+        <tr>
+          <th scope="col">N0</th>
+          <th scope="col">Blog Photo</th>
+          <th scope="col">Title </th>
+          <th scope="col">Description</th>
+          <th scope="col">Control</th>
+        </tr>
+        <thead>
+        <tbody>
+        <tr>
+          <td data-label="NO">1</td>
+          <td data-label="Blog Photo"><img src="assets/blog_art_1.jpg" alt="" srcset=""></td>
+          <td data-label="Title">Breaking Your Coder's Block</td>
+          <td data-label="Description">At one time or another, as a developer,gyhjfnbvgmhujnfbvdghbfdvnuijknbvnfgdyijnvguyhjdngfyghujnfvguhjnmfvhikjnmbjhn bvghjnmfvhjnmbfhujkfnmbvhujnmfbvghjfnmvhgbn
+            we've all found ourselves hopelessly stuck on a coding issue hgfjhfhughbfghfhbfgkuhjnmbrghijkfnvguhijkfnvyijnmdfvghijkfnmdvghijkfmn dghuijkmdnbghijkmfguhjkfnmnvguhijkfngmhujnfbghjkfmuhijkfmhghjkvmbhjkmv bhjkmcvhjkmnfbhjmnfg
+            gdghjnvguhjbnfvghujfnuhbndklfkojh
+            y8uijfvduhjknmdfhjklm,fnbhuijkmnfdhuhijmf
+            ygdbgkuhjfbghjmfduihknbfdijmnbdufhijk
+
+          </td>
+          <td data-label="Control">
+            <a href="">delete</a>
+            <a href="">Update</a>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="NO">1</td>
+          <td data-label="Blog Photo"><img src="assets/blog_art_1.jpg" alt="" srcset=""></td>
+          <td data-label="Title">Breaking Your Coder's Block</td>
+          <td data-label="Description">At one time or another, as a developer,
+            we've all found ourselves hopelessly stuck on a coding issue
+          </td>
+          <td data-label="Control">
+            <a href="">delete</a>
+            <a href="">Update</a>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="NO">1</td>
+          <td data-label="Blog Photo"><img src="assets/blog_art_1.jpg" alt="" srcset=""></td>
+          <td data-label="Title">Breaking Your Coder's Block</td>
+          <td data-label="Description">At one time or another, as a developer,
+            we've all found ourselves hopelessly stuck on a coding issue
+          </td>
+          <td data-label="Control">
+            <a href="">delete</a>
+            <a href="">Update</a>
+          </td>
+        </tr>
+       
+      </tbody>
+      </table>
+    </div>
+
+
+  </section>
+  <div class="footer">
+    <ul>
+      <li><a href=""><img src="assets/facebook.png" alt=""></a></li>
+      <li><a href=""><img src="assets/twitter.png" alt=""></a></li>
+    </ul>
+
+  </div>
 </body>
+
 </html>
