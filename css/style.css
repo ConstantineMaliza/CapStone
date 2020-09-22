@@ -422,14 +422,21 @@ li {
 }
 table {
   color: rgb(255, 255, 255);
- 
   border-collapse: collapse;
   width: 100%;
+  font-size: 16px;
 }
 
-td, th {
+th{
+  text-align: center;
+  padding: 10px 0;
+  /* font-size: 30px; */
+  font-weight: 400;
+}
+td{
   /* border: 1px solid #dddddd; */
   text-align: left;
+  width: 200px;
   padding: 8px;
 }
 
@@ -450,6 +457,78 @@ tr:hover{
 tr th{
     background-color: rgb(121, 28, 28);
 }
+  .sidebar {
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .sidebar a.active {
+            background-color: rgb(168, 9, 9);
+            color: white;
+        }
+
+        .sidebar a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+
+        div.content {
+            margin-left: 185px;
+            padding: 1px 16px;
+            height: 1000px;
+        }
+
+     
+        @media screen and (max-width: 400px) {
+          .sidebar a {
+              text-align: center;
+              float: none;
+          }
+              
+      }
+      @media screen and (max-width:555px){
+        .content .navbar ul{
+          display: flex;
+          flex-wrap: wrap;
+          
+         }
+      }
+
+        @media screen and (max-width: 700px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: fixed;
+            }
+            .content .navbar{
+              margin-top: 13%;
+              position: inherit;
+            }
+
+            .sidebar a {
+                float: left;
+            }
+         
+
+            div.content {
+                margin-left: 0;
+            }
+
+          
+
+        }
   .row::after {
     content: "";
     clear: both;
@@ -514,6 +593,7 @@ tr th{
       justify-content: center;
   }
   .navbar ul{width: 100%;
+    float: none;
   background-color: rgb(255, 255, 255);
   }
    .navbar li img{
@@ -562,4 +642,9 @@ tr th{
   .table{
     overflow-x: auto;
   }
+ 
 }
+
+
+
+
