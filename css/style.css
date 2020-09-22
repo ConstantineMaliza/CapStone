@@ -338,6 +338,48 @@ li {
     color: #C02011;
     text-decoration: none;
   }
+  .createblog {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+  }
+  .createblog .card-header h4{
+    background-color:  rgb(11, 11, 41);
+    padding: 10px;
+    color: #ffffff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .createblog input , textarea {
+    outline: 0;
+    background: #f3f3f3;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  .createblog .card-body img{
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  .submit a{
+    background-color: #1171c0;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    color: #f3f3f3;
+  }
+  .submit a:hover{
+    background-color: #0a4677;
+  }
   .navbar #username, #dropdown{
       display: none;
   }
@@ -390,7 +432,7 @@ li {
     .col-12 {width: 100%;}
  
   }
-  @media screen and (max-width:800px) {
+  @media screen and (max-width:600px) {
     section{
         height: auto;
     }
