@@ -6,77 +6,31 @@
     <title>About</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<style>
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto ;
-  padding: 10px;
-}
-
-.grid-item {
-  padding: 20px;
-  text-align: center;
-  line-height: 20px;
-}
-.grid-item img{
-    height: 300px;
-    width: 600px;
-    object-fit: cover;
-}
-.grid-item .description{
-    color: white;
-    font-size: 17px;
-    line-height: 30px;
-}
-.grid-item .comments{
-    background-color:#E5E5E5;
-    height: auto;
-    width: 400px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    
-}
-.grid-item .usercomments p{
-    font-style: italic;
-}
-.grid-item .usercomments{
-    padding-bottom: 10px;
-}
-.grid-item form a{
-    color: white;
-    border:1px solid #E5E5E5;
-    background-color: #C02011;
-    padding: 5px;
-    border-radius: 10px;
-    
-    
-}
-
-</style>
-<body style="background: rgba(1, 8, 18, 0.96);">
+<body>
     <div class="navbar">
         <div class="container">
-        <img src="assets/logo.png" alt="">
+            <div class="logo">
+                <img src="assets/logo.png" alt="">
+            </div>
 
-        <ul>
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="blog.html" class="nav-link">Blog</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
-            <li><a href="login.html" class="nav-link">Login</a></li>
-            <li><a href="#"><img src="assets/facebook.png" alt="" style="height: 20px; width: 20px;"></a></li>
-            <li><a href="#"><img src="assets/twitter.png" alt=""  style="height: 20px; width: 20px;"></a></li>
-        </ul>
+
+            <ul>
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link">Login</a></li>
+            </ul>
+        </div>
     </div>
-    </div>
-    <div class="main">
-        <section class="container">
-            <div class="grid-container">
-                <div class="grid-item">
+        <section style="background-color: rgba(1, 8, 18, 0.96);">
+            <div class="container">
+            <div class="row readblog">
+                <div class="col-7 col-s-7">
                     <img src="assets/blog_art_1.jpg" alt="">
-                    <div class="container"> 
+                    <div class=""> 
                         <div class="description">
-                            <h5>Breaking Your Coder's Block</h5>
+                            <h4 class="container title">Breaking Your Coder's Block</h4>
                             <p>
                                 At one time or another, as a developer, 
                                 we've all found ourselves hopelessly stuck on a coding issue...
@@ -84,26 +38,36 @@
                         </div>                      
                     </div>
                 </div>
-                <div class="grid-item">
+                <div class="col-5 col-s-5">
                     <div class="comments">
                         <h4>Comments</h4>
-                        <div class=" container usercomments">
-                            <h5>Peter</h5>
-                            <p>
-                                " this scenario happend to me also when I was deal with backend configuration "
-                            </p>
+                        <div class="row">
+                            <div class="col-2 col-s-2">
+                                <img src="assets/Ellipse 5.png" alt="">
+                            </div>
+                            <div class="col-10 col-s-10">
+                                <div class="usercomments">
+                                    <h5>Peter</h5>
+                                    <p>
+                                        " this scenario happend to me also when I was deal with backend configuration "
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                         <br>
                         <form action="">
-                            <p>Leave Message</p>
-                            <textarea name="" id="" style="width: 300px;"></textarea><br><br>
-                            <a href="">Send</a>
+                            <p>Leave Comment</p>
+                            <textarea name="" id=""></textarea><br><br>
+                            <div class="send">
+                                <a href="">Send</a>
+                            </div>
                         </form>
                     </div>
                 </div>
                
             </div>
-        </section>
+        </div>
+
     </div>
     
 </body>

@@ -48,6 +48,7 @@ a{
   align-items: center;
   text-decoration: none;
   font-size: 17px;
+  text-transform: uppercase;
 }
 .navbar ul{
     display: inline-flex;
@@ -249,6 +250,49 @@ a{
     border: 1px solid #C02011;
     color: white;
     font-weight: 400;
+}
+
+.readblog{
+ padding-top: 10%;
+}
+.readblog .comments{
+  background-color: #e0e0e0;
+  padding: 20px;
+}
+.readblog .comments h4{
+  text-align: center;
+  font-size: 20px;
+}
+.readblog .send{
+  background-color: #a81c0f;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  width: 80px;
+}
+.readblog .send a{
+  color: #ffffff;
+}
+.readblog .title{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.usercomments p{
+ font-style: italic;
+}
+.readblog img{
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+.readblog textarea{
+  width: 100%;
+}
+.readblog .description{
+  color: #E5E5E5;
+  font-size: 20px;
+  line-height: 20px;
 }
 .footer{
     left: 0;
@@ -491,20 +535,7 @@ tr th{
         }
 
      
-        @media screen and (max-width: 400px) {
-          .sidebar a {
-              text-align: center;
-              float: none;
-          }
-              
-      }
-      @media screen and (max-width:555px){
-        .content .navbar ul{
-          display: flex;
-          flex-wrap: wrap;
-          
-         }
-      }
+    
 
         @media screen and (max-width: 700px) {
             .sidebar {
@@ -642,9 +673,40 @@ tr th{
   .table{
     overflow-x: auto;
   }
+  .comments .row{
+    display: flex;
+  }
+  .comments img{
+    height: 100px;
+    width: 100px;
+  }
+  .readblog{
+    padding-top: 30%;
+   }
  
 }
 
-
+@media screen and (max-width: 400px) {
+  .sidebar a {
+      text-align: center;
+      float: none;
+  }
+  .comments img{
+    height: 60px;
+    width: 60px;
+  }
+  .readblog{
+    padding-top: 40%;
+   }
+ 
+      
+}
+@media screen and (max-width:555px){
+.content .navbar ul{
+  display: flex;
+  flex-wrap: wrap;
+  
+ }
+}
 
 
