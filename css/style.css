@@ -12,12 +12,12 @@
 section{
     height: 100vh;
 }
-section:nth-child(odd) {
+/* section:nth-child(even) {
     background: rgba(1, 8, 18, 0.96);
   }
-section:nth-child(even) {
+section:nth-child(odd) {
     background: rgba(226, 226, 226, 0.96);
-  }
+  } */
 
 .container{
     display: block;
@@ -52,13 +52,14 @@ a{
   align-items: center;
   text-decoration: none;
   font-size: 14px;
+  font-weight: bold;
   text-transform: uppercase;
 }
 .navbar ul{
     display: inline-flex;
     justify-content: space-between;
     float: left;
-    width: 50%;
+    width: 60%;
 }
 .navbar .link{
   background-color: #e2e2e2;
@@ -67,10 +68,15 @@ a{
 .navbar .logo{
     float: left;
     margin-top: 2px;
-    width: 50%;
+    width: 40%;
 }
 .navbar li a{
     padding: 20px;
+}
+.navbar .active{
+  background: #7F150B;
+  color: #FFFFFF;
+ 
 }
 
 .nav img{
@@ -398,7 +404,7 @@ li {
 
   }
   .createblog .card-header h4{
-    background-color:  rgb(11, 11, 41);
+    background: rgba(1, 8, 18, 0.96);
     padding: 10px;
     color: #ffffff;
     border-top-left-radius: 5px;
