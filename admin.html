@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,400;1,600;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    
+    </style>
+</head>
+
+<body>
+        <div class="sidebar">
+            <a class="active" href="adminCreateBlog.html">Create Blog</a>
+            <a href="adminUpdateBlog.html">Update Blog</a>
+            <a href="adminViewBlog.html">View Blog</a>
+            <hr>
+            <a href="#logout">Logout</a>
+        </div>
+
+        <div class="content" style="background: rgba(1, 8, 18, 0.96);">
+            <div class="navbar">
+                <div class="">
+                    <div class="logo">
+                        <img src="assets/logo.png" alt="" style="margin-left: 5%;">
+                    </div>
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li><a href="login.html" class="nav-link">Login</a></li>
+                        <li><a href="" class="" id="">Username</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="" style="margin-top: 0%;">
+                <div class="">
+                    <div style="text-align: center;padding:8% 0 2px 0">
+                        <h1 style="color: rgb(255, 255, 255);text-transform: uppercase; font-size: 30px;">Create Blog</h1>
+        
+                    </div>
+                    <form action="">
+                        <div class="row createblog">
+                            <div class="col-4 col-s-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4>Upload Blog Image</h4><br>
+                                        <input type="file" name="" id="">
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="assets/blog_art_1.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8 col-s-8">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4>Detail Information</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="">
+                                            <label for="">Title of blog</label><br>
+                                            <input type="text" name="" id="" placeholder="Breaking Your Coder's Block"
+                                                style="border-radius: 5px;"><br>
+                                            <label for="">Description</label><br>
+                                            <textarea name="" id="" cols="30" rows="4"
+                                                placeholder="At one time or another, as a developer,we've all found ourselves hopelessly stuck on a coding issue.."
+                                                style="border-radius: 5px;"></textarea>
+                                        </div>
+        
+                                    </div>
+                                </div>
+                                <div class="submit">
+                                    <a href="">Publish</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+
+</body>
+
+</html>

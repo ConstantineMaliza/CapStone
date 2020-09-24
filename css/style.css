@@ -1,8 +1,12 @@
 
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+   
 }
 
 section{
@@ -47,7 +51,7 @@ a{
   text-align: center;
   align-items: center;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 .navbar ul{
@@ -55,6 +59,9 @@ a{
     justify-content: space-between;
     float: left;
     width: 50%;
+}
+.navbar .link{
+  background-color: #e2e2e2;
 }
 
 .navbar .logo{
@@ -500,6 +507,13 @@ tr:hover{
 }
 tr th{
     background-color: rgb(121, 28, 28);
+}
+
+.table .icon img{
+  height:30px;
+  width:30px;
+  display:inline-block;
+  padding:5px;
 }
   .sidebar {
             margin: 0;
