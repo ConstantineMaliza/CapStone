@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create blog</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,400;1,600;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,400;1,600;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/admin.css">
+   
+    
 </head>
 
-<body style="background: rgba(1, 8, 18, 0.96);">
-    <div class="navbar">
+
+<body style="background: rgba(243, 243, 243, 0.96);">
+    <nav class="nav">
         <div class="container">
-            <div class="logo">
-                <img src="assets/logo.png" alt="">
-            </div>
-
-            <ul>
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li class="link"><a href="createblog.html" class="nav-link active">Create Blog</a></li>
-                <li class="link"><a href="viewblog.html" class="nav-link">View Blog</a></li>
-                <li><a href="" class="" id="">Username</a></li>
-                <li><a href="index.html" class="" id="">Logout</a></li>
-
-            </ul>
+            <label class="logo">
+                <img src="../assets/logo.png" alt="">
+            </label>
+           <ul>
+               <li><a href="">username</a></li>
+           </ul>
+           <label class="profile">
+            <img src="../assets/Ellipse 5.png" alt="">
+            
+        </label>
         </div>
-    </div>
-    <div class="main">
-
-    </div>
-    <section class="" style="margin-top: 2%;">
-        <div class="container">
-            <div style="text-align: center;padding:8% 0 2px 0">
-                <h1 style="color: rgb(255, 255, 255);text-transform: uppercase; font-size: 30px;">Create Blog</h1>
-
-            </div>
+    </nav>
+   <section>
+       <div class="row">
+           <div class="col-2 col-s-2">
+            <div class="sidenav">
+                <a href="dashboard.html">Dashboard</a>
+                <a class="active" href="createblog.html">Update Blog</a>
+                <a href="viewblog.html">View your Blog</a>
+                <a href="viewallblog.html">View all Blog</a>
+                <a href="profileedit.html">Edit profile</a>
+                <a href="index.html">Logout</a>
+              </div>
+           </div>
+           <div class="col-10 col-s-10 col-m-5 content">
             <form action="">
                 <div class="row createblog">
-                    <div class="col-4 col-s-4">
+                    <div class="col-4 col-s-4 blog">
                         <div class="card">
                             <div class="card-header">
                                 <h4>Upload Blog Image</h4><br>
                                 <input type="file" name="" id="">
                             </div>
                             <div class="card-body">
-                                <img src="assets/blog_art_1.jpg" alt="">
+                                <img src="../assets/blog_art_1.jpg" alt="">
                             </div>
                         </div>
                     </div>
-                    <div class="col-8 col-s-8">
+                    <div class="col-8 col-s-8 blog">
                         <div class="card">
                             <div class="card-header">
                                 <h4>Detail Information</h4>
@@ -74,16 +78,16 @@
                     </div>
                 </div>
             </form>
-        </div>
-    </section>
+           </div>
+       </div>
+   </section>
+   
     <div class="footer">
         <ul>
             <li><a href=""><img src="assets/facebook.png" alt=""></a></li>
             <li><a href=""><img src="assets/twitter.png" alt=""></a></li>
         </ul>
-
-    </div>
-
+        
+     </div>
 </body>
-
 </html>

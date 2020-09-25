@@ -3,27 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <title>About</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,400;1,600;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-    <div class="navbar">
+<body style="background: rgba(40, 75, 124, 0.96)">
+    <nav class="">
         <div class="container">
-            <div class="logo">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <label class="logo">
                 <img src="assets/logo.png" alt="">
-            </div>
-
-
-            <ul>
-                <li><a href="#" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#blog" class="nav-link">Blog</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="login.html" class="nav-link">Login</a></li>
-            </ul>
+            </label>
+                <ul>
+                    <li><a href="index.html" class="">Home</a></li>
+                    <li><a href="about.html" class="">About</a></li>
+                    <li><a href="blog.html" class="">Blog</a></li>
+                    <li><a href="contact.html" class="">Contact</a></li>
+                    <li><a href="login.html" class="">Login</a></li>
+                    
+                </ul>
         </div>
-    </div>
-        <section style="background-color: rgba(1, 8, 18, 0.96);">
+    </nav>
+        <section>
             <div class="container">
             <div class="row readblog">
                 <div class="col-7 col-s-7">
@@ -69,6 +78,12 @@
         </div>
 
     </div>
-    
+    <div class="footer">
+        <ul>
+            <li><a href=""><img src="assets/facebook.png" alt=""></a></li>
+            <li><a href=""><img src="assets/twitter.png" alt=""></a></li>
+        </ul>
+        
+     </div>
 </body>
 </html>

@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+nav{
+  background-color: #ffffff;
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+label.logo {
+  line-height: 10vh;
+  padding: 0 100px;
+  /* margin-top: 3px; */
+  
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 10vh;
+  margin: 0 5px;
+  
+}
+nav ul li a{
+  color: #C02011;
+  font-size: 17px;
+  text-transform: uppercase;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+nav a:active, nav a:hover{
+  background: #ebebeb;
+  transition: .5s;
+}
+nav a.active{
+  background-color: #e6e6e6;
+}
+.sidenav {
+    padding-top: 20%;
+    left: 0;
+    background-color: rgba(40, 75, 124, 0.96);
+    height:100vh;
+  }
+.sidenav a {
+    padding: 20px 8px 6px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #ffffff;
+    display: block;
+    /* text-align: center; */
+  }
+  .sidenav a:hover{
+    background-color: #ebebeb;
+    color: #C02011;
+  }
+  .sidenav a.active{
+    background-color: #ebebeb;
+    color: #C02011;
+  }
+
+  .footer{
+    left: 0;
+    bottom: 0;
+    background-color: rgb(2, 8, 39);
+    display: flex;
+    justify-content: center;
+    /* position: fixed; */
+    width: 100%;
+    height: 10vh;
+}
+.footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+.footer li a{
+    padding: 20px;
+   
+}
+.footer a:hover{
+   background-color: #ffffff;
+   color: #04192b;
+}
+.footer img{
+    height: 20px;
+    width: 20px;
+}
+.content{
+  margin-top: 2%;
+}
+.panel .card{
+  
+  background-color: #f7f7f7;
+  height: 100px;
+  border-radius: 5px;
+  padding: 16px;
+  text-align: center;
+  line-height: 30px;
+  color: rgb(5, 5, 5);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+label.profile{
+  line-height: 10vh;
+  float: right;
+}
+label.profile img{
+  height: 10vh;
+}
+.nav ul li{
+  line-height: 10vh;
+}
+.content .createblog{
+  margin-top: 4%;
+}
+.createblog {
+  background-color: #ffffff;
+  border-radius: 3px;
+  padding: 30px;
+  font-size: 20px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}
+.createblog .card-header h4{
+  background: rgba(40, 75, 124, 0.96);
+  padding: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.createblog label{
+  font-size: 14px;
+}
+.createblog input , textarea {
+  outline: 0;
+  background: #f3f3f3;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.createblog .card-body img{
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+
+.table{
+  overflow-x: auto;
+}
+table {
+  color: rgb(0, 0, 0);
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 16px;
+}
+
+th{
+  text-align: center;
+  padding: 10px 0;
+  /* font-size: 30px; */
+  font-weight: 400;
+}
+td{
+  /* border: 1px solid #dddddd; */
+  text-align: left;
+  width: 200px;
+  padding: 8px;
+}
+
+tr {
+  background-color: #dfdede;
+}
+td img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+td a{
+    color: #0c60df;
+}
+td a:hover{
+    color: #ffffff;
+}
+tr:hover{
+    background-color: rgba(40, 75, 124, 0.96);
+    color: white;
+}
+tr th{
+    background-color: rgba(40, 75, 124, 0.96);
+    color: white;
+}
+
+.table .icon img{
+  height:30px;
+  width:30px;
+  display:inline-block;
+  padding:5px;
+}
+ 
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .submit a{
+    background-color: rgba(40, 75, 124, 0.96);
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    color: #f3f3f3;
+  }
+  .submit a:hover{
+    background-color: #0a4677;
+  }
+  [class*="col-"] {
+    float: left;
+    padding:30px 15px 0 0;
+  } 
+  
+ 
+  /* For mobile phones: */
+  /* [class*="col-"] {
+    width: 100%;
+  } */
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+ 
+  }
+  @media only screen and (max-width: 600px) {
+
+    .sidenav a{
+      font-size: 16px;
+    }
+    .col-m-4 {width: 70%;}
+    .col-m-4 .col-4 {width: 50%;}
+    .panel .card{
+      margin-top: 3%;
+      height: 80px;
+    }
+    .col-4.blog{
+      width: 100%;
+    }
+    label.logo {
+      padding-left: 5px;  
+  }
+.col-m-5{width: 65%;}
+.createblog{
+  padding: 2px;
+}
+
+  }
+  @media only screen and (max-width: 520px){
+    .col-m-4 {width: 60%;}
+    .col-m-4 .col-4 {width: 100%;}
+  }
+  @media only screen and (max-width: 487px) {
+
+    .sidenav a{
+      font-size: 14px;
+    }
+    .col-m-4 {width: 50%;}
+    .col-m-4 .col-4 {width: 100%;}
+    .col-m-5{width: 60%;}
+    .col-4.blog{
+      width: 100%;
+    }
+    label.profile{
+      padding-right: 10px;
+    }
+    nav ul{
+      margin-right: 5px;
+    }
+    nav ul li{
+      margin: 0;
+      
+    }
+    
+
+  }
+  @media only screen and (max-width: 457px) {
+
+    .sidenav a{
+      font-size: 14px;
+    }
+    .col-m-4 {width: 60%;}
+    .col-m-4 .col-4 {width: 100%;}
+    nav ul li a{
+      font-size: 15px;
+     }
+     nav ul{
+      margin-right: 0;
+    }
+    .col-m-5{width: 60%;}
+    .col-4.blog{
+      width: 100%;
+    }
+     
+  }
+  @media only screen and (max-width: 400px) {
+    .nav ul li a{
+      font-size: 12px;
+      padding: 7px 4px;
+     }
+  }

@@ -31,54 +31,6 @@ a{
 }
 
 
-.nav-link:hover{
-    background-color: #7F150B;
-    color: white;
-    font-weight: 600;
-}
-.navbar{
-    background-color: rgb(253, 253, 253);
-    position: fixed;
-    top:0;
-    width: 100%;
-    padding: 5px;
-    overflow: hidden;
-}
-
-.navbar a{
-  display: block;
-  color: #C02011;
-  text-align: center;
-  align-items: center;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.navbar ul{
-    display: inline-flex;
-    justify-content: space-between;
-    float: left;
-    width: 60%;
-}
-.navbar .link{
-  background-color: #e2e2e2;
-}
-
-.navbar .logo{
-    float: left;
-    margin-top: 2px;
-    width: 40%;
-}
-.navbar li a{
-    padding: 20px;
-}
-.navbar .active{
-  background: #7F150B;
-  color: #FFFFFF;
- 
-}
-
 .nav img{
     height: 60px;
     width: 60px;
@@ -87,7 +39,7 @@ a{
 
 .wrapper{
     padding: 10% 10% 0 10%;
-    margin-top: 10%;
+   
 }
 .contact-page {
     width: 500px;
@@ -166,7 +118,7 @@ a{
 .about1 h1{
 
     text-align: center; 
-    padding: 20px; 
+    
     font-size: 30px; 
     color: white;
 }
@@ -208,7 +160,7 @@ a{
      
   }
   .blog {
-    padding: 20px;
+  
     /* text-align: justify; */
     line-height: 22px;
     ;
@@ -310,7 +262,7 @@ a{
 .footer{
     left: 0;
     bottom: 0;
-    background-color: rgb(135, 151, 241);
+    background-color: rgb(2, 8, 39);
     display: flex;
     justify-content: center;
     /* position: fixed; */
@@ -329,7 +281,7 @@ a{
 }
 .footer a:hover{
    background-color: #ffffff;
-   color: #1171c0;
+   color: #04192b;
 }
 .footer img{
     height: 20px;
@@ -521,32 +473,7 @@ tr th{
   display:inline-block;
   padding:5px;
 }
-  .sidebar {
-            margin: 0;
-            padding: 0;
-            width: 200px;
-            background-color: #f1f1f1;
-            position: fixed;
-            height: 100%;
-            overflow: auto;
-        }
-
-        .sidebar a {
-            display: block;
-            color: black;
-            padding: 16px;
-            text-decoration: none;
-        }
-
-        .sidebar a.active {
-            background-color: rgb(168, 9, 9);
-            color: white;
-        }
-
-        .sidebar a:hover:not(.active) {
-            background-color: #555;
-            color: white;
-        }
+ 
 
         div.content {
             margin-left: 185px;
@@ -554,32 +481,7 @@ tr th{
             height: 1000px;
         }
 
-     
-    
-
-        @media screen and (max-width: 700px) {
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: fixed;
-            }
-            .content .navbar{
-              margin-top: 13%;
-              position: inherit;
-            }
-
-            .sidebar a {
-                float: left;
-            }
-         
-
-            div.content {
-                margin-left: 0;
-            }
-
-          
-
-        }
+  
   .row::after {
     content: "";
     clear: both;
@@ -596,7 +498,6 @@ tr th{
   [class*="col-"] {
     width: 100%;
   }
-  
   @media only screen and (min-width: 600px) {
     /* For tablets: */
     .col-s-1 {width: 8.33%;}
@@ -628,7 +529,8 @@ tr th{
     .col-12 {width: 100%;}
  
   }
-  @media screen and (max-width:600px) {
+  
+  @media screen and (max-width:700px) {
     section{
         height: auto;
     }
@@ -638,20 +540,8 @@ tr th{
       margin-right: auto;
       width:100%;
   }
-  .navbar .logo{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-  }
-  .navbar ul{width: 100%;
-    float: none;
-  background-color: rgb(255, 255, 255);
-  }
-   .navbar li img{
-       display: none;
-   }
    .wrapper{
-       margin-top: 40%;
+   padding-top: 20%;
        padding-bottom: 200px;
    }
    .wrapper h1{
@@ -664,8 +554,12 @@ tr th{
       color:#C02011;
   }
   .about1{
-      padding-top: 30%;
+    padding-top: 20%;
   }
+  .blog{
+    padding-top: 20%;
+  }
+ 
   .about1 .col-4 img{
       height: 150px;
       width: 150px;
@@ -675,11 +569,9 @@ tr th{
   .about2{
     padding-top: 30%;
 }
-.blog{
-    padding-top: 30%;
-}
+
 #contact h1{
-    padding-top: 25%;
+    padding-top: 7%;
 }
 .contact-page {
     width: 360px;
@@ -688,7 +580,7 @@ tr th{
     max-width:  360px;
  }
   .main{
-      margin-top: 30%;
+      margin-top: 15%;
   }
   .table{
     overflow-x: auto;
@@ -701,7 +593,7 @@ tr th{
     width: 100px;
   }
   .readblog{
-    padding-top: 30%;
+    padding-top: 10%;
    }
  
 }
@@ -716,7 +608,7 @@ tr th{
     width: 60px;
   }
   .readblog{
-    padding-top: 40%;
+    padding-top: 15%;
    }
  
       
@@ -729,4 +621,5 @@ tr th{
  }
 }
 
+ 
 

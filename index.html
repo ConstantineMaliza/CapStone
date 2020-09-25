@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/nav.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,400;1,600;1,900&display=swap"
         rel="stylesheet">
@@ -13,31 +15,28 @@
 </head>
 
 <body container" class="bg">
-    <div class="navbar">
+    <nav class="">
         <div class="container">
-            <div class="logo">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <label class="logo">
                 <img src="assets/logo.png" alt="">
-            </div>
-
-
-            <ul>
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="login.html" class="nav-link">Login</a></li>
-                <!-- <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                  </a>
-                </li> -->
-            </ul>
+            </label>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html" class="">About</a></li>
+                    <li><a href="blog.html" class="">Blog</a></li>
+                    <li><a href="contact.html" class="">Contact</a></li>
+                    <li><a href="login.html" class="">Login</a></li>
+                    
+                </ul>
         </div>
-    </div>
+    </nav>
     <section style="background: url('assets/background.jpg');background-size: cover;">
-        <div class="nav">
-            <img src="assets/logo.png" alt="">
-        </div>
-        <div class="wrapper container main">
+       
+        <div class="wrapper container " style="padding-top: 20%;">
             <h1>Hi I am <span>Constantine Maliza</span> </h1>
             <h1>I am Full Stack Developer</h1>
 
@@ -47,230 +46,14 @@
         </div>
         </div>
     </section>
-    <!-- <section id="about">
-        <div class="container">
-            <div class="about1">
-                <h1>ABOUT</h1>
-                <div class="row">
-                    <div class="col-4 col-s-4">
-                        <img src="assets/responsivegriditem.png" alt="">
-                        <h5>Responsive</h5>
-                        <p>My layouts will work on any device, big or small.</p>
-                    </div>
-                    <div class="col-4 col-s-4">
-                        <img src="assets/UIgriditem.png" alt="">
-                        <h5>UI design</h5>
-                        <p>Strong preference for easy to use, intuitive UX/UI.</p>
-                    </div>
-                    <div class="col-4 col-s-4">
-                        <img src="assets/dynamicgriditem.png" alt="">
-                        <h5>Dynamic</h5>
-                        <p>Websites don't have to be static, I love making pages come to life.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container">
-            <div class="about2">
-                <div class="row">
-                    <div class="col-4 col-s-8">
-                        <div class="aboutme">
-                            <h4>Who is this?</h4>
-                            <hr>
-                            <p>
-                                I'm a Full stack Developer .<br>
-                                I have serious passion for UI effects,
-                                animations and creating intuitive, dynamic user experiences.
-                                Let's make something special.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-8 col-s-8">
-                        <img src="assets/levelof skills.png" alt="">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </section>
-    <section id="blog" style="height: auto;">
-        <div class="container blog">
-            <h1>Blog</h1>
-            <div class="row">
-                <div class="col-4 col-s-4">
-                    <div class="card">
-                        <img src="assets/blog_art_1.jpg" alt="">
-                        <div class="card-body container">
-                            <div class="card-title">
-                                <h5>Breaking Your Coder's Block</h5>
-                            </div>
-                         
-                            <div class="card-text">
-                                <div class="date">
-                                    <p>April 2019</p>
-                                </div>
-                                <p>At one time or another, as a developer, 
-                                we've all found ourselves hopelessly stuck on a coding issue...</p>
-                            </div>
-
-                        </div>
-                        <div class="card-footer">
-                            <a href="selectedarticle.html">Read More</a>
-                        </div>
-                    </div>
-                   
-                </div>
-                <div class="col-4 col-s-4">
-                    <div class="card">
-                        <img src="assets/blog_art_1.jpg" alt="">
-                        <div class="card-body container">
-                            <div class="card-title">
-                                <h5>Breaking Your Coder's Block</h5>
-                            </div>
-                           
-                            <div class="card-text">
-                                <div class="date">
-                                    <p>April 2019</p>
-                                </div>
-                                <p>At one time or another, as a developer, 
-                                we've all found ourselves hopelessly stuck on a coding issue...</p>
-                            </div>
-
-                        </div>
-                        <div class="card-footer">
-                            <a href="selectedarticle.html"> Read more</a>
-                        </div>
-                    </div>
-                   
-                </div>
-                <div class="col-4 col-s-4">
-                    <div class="card">
-                        <img src="assets/blog_art_1.jpg" alt="">
-                        <div class="card-body container">
-                            <div class="card-title">
-                                <h5>Breaking Your Coder's Block</h5>
-                            </div>
-                            
-                            <div class="card-text">
-                                <div class="date">
-                                    <p>April 2019</p>
-                                </div>
-                                <p>At one time or another, as a developer, 
-                                we've all found ourselves hopelessly stuck on a coding issue...</p>
-                            </div>
-
-                        </div>
-                        <div class="card-footer">
-                            <a href="selectedarticle.html"> Read more</a>
-                        </div>
-                    </div>
-                   
-                </div>
-                <div class="col-4 col-s-4">
-                    <div class="card">
-                        <img src="assets/blog_art_1.jpg" alt="">
-                        <div class="card-body container">
-                            <div class="card-title">
-                                <h5>Breaking Your Coder's Block</h5>
-                            </div>
-                            
-                            <div class="card-text">
-                                <div class="date">
-                                    <p>April 2019</p>
-                                </div>
-                                <p>At one time or another, as a developer, 
-                                we've all found ourselves hopelessly stuck on a coding issue...</p>
-                            </div>
-
-                        </div>
-                        <div class="card-footer">
-                            <a href="selectedarticle.html"> Read more</a>
-                        </div>
-                    </div>
-                   
-                </div>
-                <div class="col-4 col-s-4">
-                    <div class="card">
-                        <img src="assets/blog_art_1.jpg" alt="">
-                        <div class="card-body container">
-                            <div class="card-title">
-                                <h5>Breaking Your Coder's Block</h5>
-                            </div>
-                            
-                            <div class="card-text">
-                                <div class="date">
-                                    <p>April 2019</p>
-                                </div>
-                                <p>At one time or another, as a developer, 
-                                we've all found ourselves hopelessly stuck on a coding issue...</p>
-                            </div>
-
-                        </div>
-                        <div class="card-footer">
-                            <a href="selectedarticle.html">Read more</a>
-                        </div>
-                    </div>
-                   
-                </div>
-                <div class="col-4 col-s-4">
-                    <div class="card">
-                        <img src="assets/blog_art_1.jpg" alt="">
-                        <div class="card-body container">
-                            <div class="card-title">
-                                <h5>Breaking Your Coder's Block</h5>
-                            </div>
-                           
-                            <div class="card-text">
-                                <div class="date">
-                                    <p>April 2019</p>
-                                </div>
-                                <p>At one time or another, as a developer, 
-                                we've all found ourselves hopelessly stuck on a coding issue...</p>
-                            </div>
-
-                        </div>
-                        <div class="card-footer">
-                            <a href="selectedarticle.html">Read more</a>
-                        </div>
-                    </div>
-                   
-                </div>
-                
-              </div>
-        </div>
-    </section>
-    <section id="contact">
-        <div class="container">
-              <div style="text-align: center;padding:8% 0 2px 0">
-            <h1 style="color: rgb(0, 0, 0);text-transform: uppercase; font-size: 30px;">Contact</h1>
-            <p style="color:#C02011;">Have a question or work together?</p>
-        </div>
-        <div class="contact-page">
-            <div class="contact-form">
-              <form class="">
-                <label for="">Your Name:</label>
-                <input type="text">
-                <label for="">Email:</label>
-                <input type="email">
-                <label for="">Message:</label>
-                <textarea name="" id="" cols="20" rows="5"></textarea>
-                <button><a href="#">Submit</a> </button>
-               
-              </form>
-            </div>
-          </div>
-        </div>
-    </section> -->
-    <div class="footer">
+   <div class="footer">
        <ul>
            <li><a href=""><img src="assets/facebook.png" alt=""></a></li>
            <li><a href=""><img src="assets/twitter.png" alt=""></a></li>
        </ul>
        
     </div>
+    <script src="js/init.js"></script>
 </body>
 
 </html>

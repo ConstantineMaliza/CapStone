@@ -9,30 +9,34 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,400;1,600;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
-
-
-<body style="background: rgba(1, 8, 18, 0.96);">
-    <div class="navbar">
-        <div class="container">
-            <div class="logo">
+<body style="background: rgba(40, 75, 124, 0.96);">
+    <nav class="">
+        <div class=" container">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <label class="logo">
                 <img src="assets/logo.png" alt="">
-            </div>
-
-            <ul>
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="signup.html" class="nav-link active">Sign up</a></li>
-                
-            </ul>
+            </label>
+                <ul>
+                    <li><a href="index.html" class="">Home</a></li>
+                    <li><a href="about.html" class="">About</a></li>
+                    <li><a href="blog.html" class="">Blog</a></li>
+                    <li><a href="contact.html" class="">Contact</a></li>
+                    <li><a href="signup.html" class="active">Sign up</a></li>
+                    
+                </ul>
         </div>
-    </div>
+    </nav>
     <div class="main">
 
     </div>
-    <section class="main container" style="margin-top: 10%;">
+    <section class="main container" style="margin-top: 5%;">
         <div style="text-align: center;padding:10px 0 0 0">
             <h1 style="color: white;text-transform: uppercase;">Sign up</h1>
         </div>
@@ -42,7 +46,7 @@
                     <input type="text" placeholder="name" />
                     <input type="password" placeholder="password" />
                     <input type="text" placeholder="email address" />
-                    <button><a href="userprofile.html">create</a></button>
+                    <button><a href="./admin/userprofile.html">signup</a></button>
                     <p class="message">Already registered? <a href="login.html">Sign In</a></p>
                 </form>
 

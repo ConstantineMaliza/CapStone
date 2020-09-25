@@ -3,32 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,400;1,600;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
-<body style="background: rgba(1, 8, 18, 0.96);">
-    <div class="navbar">
+<body style="background: rgba(40, 75, 124, 0.96);">
+    <nav class="">
         <div class="container">
-            <div class="logo">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <label class="logo">
                 <img src="assets/logo.png" alt="">
-            </div>
-
-        <ul>
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="index.html#about" class="nav-link">About</a></li>
-            <li><a href="index.html#blog" class="nav-link">Blog</a></li>
-            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-            <li><a href="login.html" class="nav-link active">Login</a></li>
-            
-        </ul>
-    </div>
-    </div>
+            </label>
+                <ul>
+                    <li><a href="index.html" class="">Home</a></li>
+                    <li><a href="about.html" class="">About</a></li>
+                    <li><a href="blog.html" class="">Blog</a></li>
+                    <li><a href="contact.html" class="">Contact</a></li>
+                    <li><a href="login.html" class="active">Login</a></li>
+                    
+                </ul>
+        </div>
+    </nav>
     <div class="main">
 
     </div>
-    <section class="" style="margin-top: 10%;">
+    <section class="" style="margin-top: 5%;">
         <div class="container">
         <div style="text-align: center;padding:10px 0 0 0">
             <h1 style="color: white;text-transform: uppercase;">Login</h1>
@@ -40,8 +46,9 @@
               <form class="login-form">
                 <input type="text" placeholder="username"/>
                 <input type="password" placeholder="password"/>
-                <button><a href="userprofile.html">login</a> </button>
+                <button><a href="./admin/userprofile.html">login</a> </button>
                 <p class="message">Not registered? <a href="signup.html">Create an account</a></p>
+                <p class="message"> <a href="./admin/dashboard.html">Login as Admin</a></p>
               </form>
             </div>
           </div>
