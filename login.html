@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,400;1,600;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,400;1,600;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,14 +24,14 @@
             <label class="logo">
                 <img src="assets/logo.png" alt="">
             </label>
-                <ul>
-                    <li><a href="index.html" class="">Home</a></li>
-                    <li><a href="about.html" class="">About</a></li>
-                    <li><a href="blog.html" class="">Blog</a></li>
-                    <li><a href="contact.html" class="">Contact</a></li>
-                    <li><a href="login.html" class="active">Login</a></li>
-                    
-                </ul>
+            <ul>
+                <li><a href="index.html" class="">Home</a></li>
+                <li><a href="about.html" class="">About</a></li>
+                <li><a href="blog.html" class="">Blog</a></li>
+                <li><a href="contact.html" class="">Contact</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
+
+            </ul>
         </div>
     </nav>
     <div class="main">
@@ -36,31 +39,73 @@
     </div>
     <section class="" style="margin-top: 5%;">
         <div class="container">
-        <div style="text-align: center;padding:10px 0 0 0">
-            <h1 style="color: white;text-transform: uppercase;">Login</h1>
-          
-        </div>
-    <div class="">       
-        <div class="login-page">
-            <div class="form">
-              <form class="login-form">
-                <input type="text" placeholder="username"/>
-                <input type="password" placeholder="password"/>
-                <button><a href="./admin/userprofile.html">login</a> </button>
-                <p class="message">Not registered? <a href="signup.html">Create an account</a></p>
-                <p class="message"> <a href="./admin/dashboard.html">Login as Admin</a></p>
-              </form>
+            <div style="text-align: center;padding:10px 0 0 0">
+                <h1 style="color: white;text-transform: uppercase;">Login</h1>
+
             </div>
-          </div>
+            <div class="">
+                <div class="login-page">
+                    <div class="form">
+                        <form class="login-form" id="login-Form">
+                            <input type="email" placeholder="email" id="email" />
+                            <input type="password" placeholder="password" id="pass" />
+                            <button type="submit">login</button>
+                            <p class="message">Not registered? <a href="signup.html">Create an account</a></p>
+                            <p class="message"> <a href="./admin/dashboard.html">Login as Admin</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+        <ul>
+            <li><a href=""><img src="assets/facebook.png" alt=""></a></li>
+            <li><a href=""><img src="assets/twitter.png" alt=""></a></li>
+        </ul>
+
     </div>
-</div>
-</section>
-<div class="footer">
-    <ul>
-        <li><a href=""><img src="assets/facebook.png" alt=""></a></li>
-        <li><a href=""><img src="assets/twitter.png" alt=""></a></li>
-    </ul>
-    
- </div>  
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
+    <script src="javascript/firebase.js"></script>
+
+    <script>
+        // Login form
+
+        const loginForm = document.querySelector("#login-Form");
+        loginForm.addEventListener('submit', (e) => {
+
+            e.preventDefault();
+
+            const email = loginForm['email'].value;
+            const password = loginForm['pass'].value;
+
+            auth.signInWithEmailAndPassword(email, password).catch(function (error) {
+
+                var errorCode = error.code;
+                var errorMessage = error.message;
+               
+                alert(errorCode + " - " + errorMessage);
+
+                try {
+                    cred.user.sendPasswordResetEmail(email);
+                } catch (err) {
+
+                }
+
+            }).then(cred => {
+
+                console.log(cred);
+                window.location.href="admin/dashboard.html"
+                // const uid = cred.user.uid;
+
+                // sessionStorage.setItem("userUID", uid);
+
+            });
+
+        });
+    </script>
 </body>
+
 </html>

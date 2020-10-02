@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/nav.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,400;1,600;1,900&display=swap"
@@ -30,6 +29,7 @@
                     <li><a href="blog.html" class="">Blog</a></li>
                     <li><a href="contact.html" class="">Contact</a></li>
                     <li><a href="login.html" class="">Login</a></li>
+                    <li><a href="#" class="" id="logout">Logout</a></li>
                     
                 </ul>
         </div>
@@ -53,7 +53,23 @@
        </ul>
        
     </div>
-    <script src="js/init.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
+    <script src="javascript/firebase.js"></script>
+   
+    <script>
+        
+//logout
+const logout = document.querySelector("#logout");
+logout.addEventListener('click',(e) =>{
+    e.preventDefault();
+
+    auth.signOut().then(()=>{
+         console.log('user signed out');
+    })
+});
+    </script>
 </body>
 
 </html>
