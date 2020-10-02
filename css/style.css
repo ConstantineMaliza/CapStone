@@ -597,6 +597,14 @@ tr th{
    }
  
 }
+#pError{
+background-color: #c02b11;
+
+margin-bottom: 20px;
+display: none;
+color: white;
+padding: 10px 20px;
+}
 
 @media screen and (max-width: 400px) {
   .sidebar a {
