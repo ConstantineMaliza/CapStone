@@ -1,0 +1,47 @@
+#text {
+    display: none;
+    color: #000;
+    padding: 20px 40px;
+    background-color:#f1f1f1;
+    /* margin: 0 0 15px 0; */
+    font-size:12px;
+  }
+#name {
+    display: none;
+    color: #000;
+    padding: 20px 40px;
+    background-color:#f1f1f1;
+    /* margin: 0 0 15px 0; */
+    font-size:12px;
+  }
+
+
+  #message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    padding: 20px;
+    font-size:12px;
+    /* margin-bottom: 15px; */
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+form .valid {
+    color: green;
+    font-weight: bold;
+}
+
+form .valid:before {
+    /* left: -35px; */
+    content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+form .invalid {
+    color: red;
+}
+
+form .invalid:before {
+    /* left: -35px; */
+    content: "✖";
+}

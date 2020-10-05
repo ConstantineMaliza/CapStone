@@ -11,9 +11,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="css/formvalidation.css">
 </head>
-
 <body style="background: rgba(40, 75, 124, 0.96);">
     <nav class="">
         <div class=" container">
@@ -37,22 +36,36 @@
     <div class="main">
 
     </div>
-    <section class="main container" style="margin-top: 5%;">
+    <section class="main container" style="margin-top: 5%; height: auto;">
         <div style="text-align: center;padding:10px 0 0 0">
             <h1 style="color: white;text-transform: uppercase;">Sign up</h1>
         </div>
         <div class="login-page">
             <div class="form">
-                <div id=pError></div>
+               
                 <form class="register-form" id="registerForm">
-                    <input type="text" placeholder="name" id="username" name="username" />
-                    <input type="email" placeholder="email address" id="email" name="email" />
-                    <input type="password" placeholder="password" id="password" name="password" />
-                    <input type="password" placeholder="confirm password" id="cpassword" name="cpassword" />
-                    <button type="submit" onkeyup="onChangeInputForm()">signup</button>
+                    <div class="input-box">
+                    <input type="text" placeholder="name" id="username" name="username" required /> 
+                    <span id="name" class="invalid" ></span>
+                    </div>
+                    <!-- <div class="message" id="emailError"></div> -->
+                    <div class="input-box">
+                    <input type="text"  placeholder="email address" id="email" name="email" required />
+                    <span id="text" class="invalid" ></span>
+                    </div>
+                    <div class="input-box">
+                    <input type="password" placeholder="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required  />
+                    <span id="message">
+                        <p>Password must contain the following:</p>
+                        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                        <p id="number" class="invalid">A <b>number</b></p>
+                        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                    </span>
+                    </div>
+                    <button type="submit"  >signup</button>
                     <p class="message">Already registered? <a href="login.html">Sign In</a></p>
                 </form>
-
             </div>
         </div>
     </section>
@@ -69,48 +82,45 @@
     <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
     <script src="js/firebase.js"></script>
     <script src="js/init.js"></script>
-
+    <script src="js/auth.js"></script>
     <script>
-        const signupForm = document.querySelector('#registerForm');
-        // const pError = document.querySelector('#pError');
-        signupForm.addEventListener('submit', (e) => {
-            e.preventDefault();
 
-            const username = signupForm['username'].value;
-            const email = signupForm['email'].value;
-            const password = signupForm['password'].value;
-            const cpassword = signupForm['cpassword'].value;
+// Sign Up Form
+const form = document.querySelector('#registerForm');
 
-            if(password !== cpassword){
-                pError.style.display='block';
-                pError.appendChild(
-                    document.createTextNode('incorrect Password')
-                );
-               
-                return;
-            }
+const pError = document.querySelector('#pError');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-            auth.createUserWithEmailAndPassword(email, password).catch(function (error) {
+    const username = form['username'].value;
 
-                var errorCode = error.code;
-                var errorMessage = error.message;
+    const email = form['email'].value;     
+    const password = form['password'].value;
+   
 
-                alert(errorCode + " - " + errorMessage);
+    auth.createUserWithEmailAndPassword(email, password).catch(function (error) {
 
-            }).then(cred => {
-                const uid = cred.user.uid;
-                console.log(uid);
-                db.collection("RegisteredUser").doc(uid).set({
+        var errorCode = error.code;
+        var errorMessage = error.message;
 
-                    User_id: uid,
-                    Username: username,
-                    Email: email,
-                    Password: password
-                }).then(result => {
-                    alert("Successfull Sign up " + username);
-                });
-            });
+        alert(errorCode + " - " + errorMessage);
+
+    }).then(cred => {
+        const uid = cred.user.uid;
+        console.log(uid);
+        db.collection("RegisteredUser").doc(uid).set({
+
+            User_id: uid,
+            Username: username,
+            Email: email,
+            Password: password
+        }).then(result => {
+            alert("Successfull Sign up " + username);
         });
+    });
+});
+
+ 
     </script>
 </body>
 
