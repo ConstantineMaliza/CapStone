@@ -1,7 +1,4 @@
-
-// var uid=db.collection('Message').push().key;
-
-
+//Contact Form
 const contactform= document.querySelector('#contactForm');
 
 contactform.addEventListener('submit',(e) =>{
