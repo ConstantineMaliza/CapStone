@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="css/formvalidation.css">
 </head>
 
 <body style="background: rgba(40, 75, 124, 0.96);">
@@ -46,9 +46,9 @@
             <div class="">
                 <div class="login-page">
                     <div class="form">
-                        <form class="login-form" id="login-Form">
-                            <input type="email" placeholder="email" id="email" />
-                            <input type="password" placeholder="password" id="pass" />
+                        <form class="login-form" id="login-Form">                         
+                            <input type="email" placeholder="email" id="email" reqired/>                          
+                            <input type="password" placeholder="password" id="pass" required/>
                             <button type="submit">login</button>
                             <p class="message">Not registered? <a href="signup.html">Create an account</a></p>
                             <p class="message"> <a href="./admin/dashboard.html">Login as Admin</a></p>
@@ -106,6 +106,7 @@
 
    });
     </script>
+    <script src="js/init.js"></script>
 </body>
 
 </html>
