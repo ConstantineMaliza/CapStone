@@ -97,16 +97,16 @@
        }).then(cred => {
 
            console.log(cred);
-        //    window.location.href="admin/dashboard.html"
-           // const uid = cred.user.uid;
 
-           // sessionStorage.setItem("userUID", uid);
+           window.location.href="admin/dashboard.html"
+           const uid = cred.user.uid;
+
+           sessionStorage.setItem("userUID", uid);
 
        });
 
    });
     </script>
-    <script src="js/init.js"></script>
 </body>
 
 </html>

@@ -22,7 +22,7 @@ email.onkeyup = function() {
     text.style.display='block';
     text.innerHTML = "Your Email Address in valid"
     text.style.color = '#00ff00'
-    text.style.font-weight-'bold'
+    
   } else {
     form.classList.remove('valid')
     form.classList.add('invalid')
