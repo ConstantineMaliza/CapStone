@@ -29,7 +29,7 @@
                     <li><a href="blog.html" class="">Blog</a></li>
                     <li><a href="contact.html" class="">Contact</a></li>
                     <li><a href="login.html" class="">Login</a></li>
-                    <li><a href="" style="text-transform: capitalize;color:crimson" id="username">username</a></li>
+                    <li><a href="" style="text-transform: capitalize;"id="username">username</a></li>
                     <li><a href="#" class="" id="logout">Logout</a></li>
                     
                 </ul>
@@ -62,15 +62,8 @@
     <script src="js/auth.js"></script>
    <script>
                
-//logout
-const logout = document.querySelector("#logout");
-logout.addEventListener('click',(e) =>{
-    e.preventDefault();
 
-    auth.signOut().then(()=>{
-         console.log('user signed out');
-    })
-});
+
 
    </script>
 </body>

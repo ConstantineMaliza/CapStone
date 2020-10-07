@@ -30,6 +30,8 @@
                 <li><a href="blog.html" class="">Blog</a></li>
                 <li><a href="contact.html" class="">Contact</a></li>
                 <li><a href="login.html" class="active">Login</a></li>
+                <li><a href="" style="text-transform: capitalize;"id="username">username</a></li>
+                <li><a href="#" class="" id="logout">Logout</a></li>
 
             </ul>
         </div>
@@ -96,13 +98,21 @@
            }
 
        }).then(cred => {
-
-           console.log(cred);
-
         //    window.location.href="admin/dashboard.html"
            const uid = cred.user.uid;
 
            sessionStorage.setItem("userUID", uid);
+
+           db.collection("RegisteredUser").doc(uid).get().then( function(snapshot){
+  
+            var childData = snapshot.data();
+
+            console.log(childData);
+
+            var username = childData.Username;
+            sessionStorage.setItem("username", username);  
+            console.log(username);    
+            });
 
        });
 

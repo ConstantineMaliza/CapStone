@@ -604,6 +604,9 @@ display: none;
 color: white;
 padding: 10px 20px;
 }
+#commentsdiv{
+  display: none;
+}
 
 @media screen and (max-width: 400px) {
   .sidebar a {
