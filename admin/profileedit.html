@@ -46,16 +46,16 @@
                 <h1 style="color: rgb(0, 0, 0)">Edit your profile</h1>
 
               </div>
-            <form action="">
+            <form action="" id="editprofile">
                 <div class="row createblog">
                     <div class="col-4 col-s-4 blog">
                         <div class="card">
                             <div class="card-header">
                                 <h4>Upload Profile Image</h4><br>
-                                <input type="file" name="" id="">
+                                <input type="file" name="" id="inputfile">
                             </div>
                             <div class="card-body">
-                                <img src="../assets/IMG_20181205_232834_629.jpg" alt="" style="height: 30vh;object-fit: cover;">
+                                <img src="../assets/IMG_20181205_232834_629.jpg" class="image" id="imageFolder" alt="" style="height: 30vh;object-fit: cover;">
                             </div>
                         </div>
                     </div>
@@ -67,20 +67,21 @@
                             <div class="card-body">
                                 <div class="">
                                     <label for="">username</label><br>
-                                    <input type="text" name="" id="" 
+                                    <input type="text" name="name" id="name" 
                                         style="border-radius: 5px;"><br>
                                     <label for="">change Email</label><br>
-                                    <input type="email" name="" id="" 
+                                    <input type="email" name="email" id="email" 
                                     style="border-radius: 5px;"><br>
                                     <label for="">change Password</label><br>
-                                    <input type="password" name="" id="" 
+                                    <input type="password" name="password" id="password" 
                                     style="border-radius: 5px;"><br>
                                 </div>
 
                             </div>
                         </div>
                         <div class="submit">
-                            <a href="">Publish</a>
+                            <button>Publish</button>
+                            
                         </div>
                     </div>
                 </div>
@@ -91,10 +92,17 @@
    
     <div class="footer">
         <ul>
-            <li><a href=""><img src="assets/facebook.png" alt=""></a></li>
-            <li><a href=""><img src="assets/twitter.png" alt=""></a></li>
+            <li><a href=""><img src="../assets/facebook.png" alt=""></a></li>
+            <li><a href=""><img src="../assets/twitter.png" alt=""></a></li>
         </ul>
         
      </div>
+     <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-storage.js"></script>
+     <script src="../js/firebase.js"></script>
+     <script src="../js/auth.js"></script>
+     <script src="js/editprofile.js"></script>
 </body>
 </html>
