@@ -169,10 +169,11 @@ table {
 }
 
 th{
-  text-align: center;
+  
   padding: 10px 0;
   /* font-size: 30px; */
   font-weight: 400;
+  text-align:left;
 }
 td{
   /* border: 1px solid #dddddd; */
@@ -202,6 +203,7 @@ tr:hover{
 tr th{
     background-color: rgba(40, 75, 124, 0.96);
     color: white;
+    
 }
 
 .table .icon img{

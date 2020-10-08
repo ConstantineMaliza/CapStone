@@ -19,9 +19,9 @@ email.onkeyup = function() {
   if (email.value.match(emailpattern)) {
     form.classList.add('valid')
     form.classList.remove('invalid')
-    text.style.display='block';
+    text.style.display='none';
     text.innerHTML = "Your Email Address in valid"
-    text.style.color = '#00ff00'
+    text.style.color = '#0000ff'
     
   } else {
     form.classList.remove('valid')

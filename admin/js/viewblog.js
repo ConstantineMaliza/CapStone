@@ -2,6 +2,7 @@
 db.collection("Blog").get().then(function(snapshot) {
     var htmlAll = "";
     var childCounts = snapshot.size;
+    
     var t = 0;
     var i = childCounts + 1;
     console.log(childCounts);
@@ -29,7 +30,8 @@ db.collection("Blog").get().then(function(snapshot) {
         `;
         htmlAll = html + htmlAll;
         if(t == childCounts) {
-        document.getElementById("blog").innerHTML=htmlAll ;
+        document.getElementById("blog").innerHTML=htmlAll;
+     
         }
     });
 });
@@ -51,3 +53,10 @@ function deleteBlog(childUID) {
 function edit(childUID){
   window.location.href="updateblog.html?postuid="+childUID;
 }
+
+//count blog
+db.collection("Blog").get().then(function(snapshot) {
+    var childCounts = snapshot.size;
+    document.getElementById("countblog").innerHTML=childCounts;
+
+});

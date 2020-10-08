@@ -8,6 +8,8 @@ db.collection("Message").get().then(function(snapshot) {
     snapshot.forEach(function(doc) {
         var childUID = doc.id;
         var childData = doc.data();
+        var date = new Date(childData.date).toLocaleString();
+
         if(t==0){
             htmlAll = "";  
           }
@@ -19,7 +21,7 @@ db.collection("Message").get().then(function(snapshot) {
                <td>${i}</td>
                  <td>${childData.fullname}</td>
                  <td>${childData.message}</td>
-                  <td>22/8/2020</td>
+                  <td>${date}</td>
                <td>
                     <a href="#respond" class="" style="color: white;" onclick="respond('${childUID}')">Respond</a>
                     <a href="#deleteQuerry" class="icon" onclick="deleteQuery('${childUID}')"><img src="../assets/delete.png" alt="" ></a>
@@ -37,7 +39,7 @@ function deleteQuery(childUID) {
     
     db.collection("Message").doc(childUID).delete().then(function() {
     
-    alert("sucessfully deleted");
+    console.log("sucessfully deleted");
 
     var element = document.getElementById(childUID);
 
@@ -50,3 +52,9 @@ function deleteQuery(childUID) {
 function respond(childUID){
   window.location.href="respond.html?postuid="+childUID;
 }
+
+//count queries
+db.collection("Message").get().then(function(snapshot) {
+  var childCounts = snapshot.size;
+  document.getElementById("countqueries").innerHTML = childCounts;
+});
