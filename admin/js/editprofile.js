@@ -25,7 +25,7 @@ functionphoto.addEventListener('change', function(input) {
       var path = window.URL.createObjectURL(file);
 
       document.querySelector("#imageFolder").src = path;
-      storage.ref("ProfilePhoto").put(file)
+      storage.ref("ProfilePhoto").child(file.name).put(file)
       .then(snapshot => snapshot.ref.getDownloadURL())
       .then((link) => {                                
         photo=link;

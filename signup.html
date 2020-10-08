@@ -119,7 +119,8 @@ form.addEventListener('submit', (e) => {
             Role:'guest',
             Password: password
         }).then(result => {
-            alert("Successfull Sign up " + username);
+            console.log("Successfull Sign up " + username);
+            window.location.href="login.html";
         });
     });
 });

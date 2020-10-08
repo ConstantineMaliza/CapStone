@@ -3,6 +3,7 @@
 const blog = document.querySelector('#createBlog');
 
 var photo="";
+
 var functionphoto= document.querySelector('#inputfile');
 
 functionphoto.addEventListener('change', function(input) {
@@ -12,12 +13,12 @@ functionphoto.addEventListener('change', function(input) {
       var path = window.URL.createObjectURL(file);
 
       document.querySelector("#imageFolder").src = path;
-      storage.ref("BlogPhoto").put(file)
+      storage.ref("BlogPhoto").child(file.name).put(file)
       .then(snapshot => snapshot.ref.getDownloadURL())
       .then((link) => {                                
         // alert(link);
         photo=link;
-        alert("successfull Uploaded");
+        console.log("successfull Uploaded");
       });	
 
       });
@@ -38,7 +39,7 @@ blog.addEventListener('submit', (e) =>{
     db.collection("Blog").doc().set(blogData).catch(function(error) {
         console.error("Error adding document: ", error);
     }).then(function(){
-        alert('successful publish!');
+        console.log('successful publish!');
         window.location.href="createblog.html";
     });
 

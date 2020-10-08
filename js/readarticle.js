@@ -37,14 +37,16 @@ db.collection("Blog").doc(uid).get().then(function (snapshot) {
             commentmessage,
             name,
             blogtitle,
+            uid,
             date: new Date().getTime()
         }
 
         db.collection("Comment").doc().set(commentData).catch(function (error) {
             console.error("Error adding document: ", error);
         }).then(function () {
-            alert('successful comment sent!');
-            // window.location.href="index.html";
+            console.log('successful comment sent!');
+           
+            window.location.href="blog.html";
         });
     });
 });
@@ -53,20 +55,22 @@ db.collection("Comment").get().then(function(snapshot){
     var html="";
     snapshot.forEach(function(doc) {
         var childData = doc.data();
-
-        html+=`
-        <div class="col-2 col-s-2">
-            <img src="assets/Ellipse 5.png" alt="">
-        </div>
-        <div class="col-10 col-s-10">
-            <div class="usercomments">
-                <h5>${childData.name}</h5>
-                <p>
-                    " ${childData.commentmessage} "
-                </p>
+        if(uid === childData.uid){
+            html+=`
+            <div class="col-2 col-s-2">
+                <img src="assets/Ellipse 5.png" alt="">
             </div>
-        </div>
-        `;
-        document.getElementById('readcomment').innerHTML=html;
+            <div class="col-10 col-s-10">
+                <div class="usercomments">
+                    <h5>${childData.name}</h5>
+                    <p>
+                        " ${childData.commentmessage} "
+                    </p>
+                </div>
+            </div>
+            `;
+            document.getElementById('readcomment').innerHTML=html;
+        }
+       
     });
 })

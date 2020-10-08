@@ -15,7 +15,7 @@ db.collection("Blog").get().then(function(snapshot) {
                     <h5>${childData.title}</h5>
                 </div>
              
-                <div class="card-text">
+                <div class="card-text" style="height:20vh;">
                     <div class="date">
                         <p>${date}</p>
                     </div>
