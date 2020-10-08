@@ -45,4 +45,4 @@ db.collection("Blog").get().then(function(snapshot) {
 // call selected articles page
 function read(childUID) {
     window.location.href="selectedarticle.html?postuid="+childUID;
-    }
+}
