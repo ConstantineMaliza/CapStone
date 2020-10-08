@@ -23,4 +23,30 @@ function getUrlParameter(name) {
         `;
         document.getElementById('article').innerHTML=html;
 
+           // leave comment
+const commentForm = document.querySelector('.commentForm');
+
+commentForm.addEventListener('submit',(e)=>{
+    e.preventDefault();
+
+    const commentmessage = commentForm['commentmessage'].value;
+    const name = sessionStorage.getItem('username');
+    const blogtitle = childData.title;
+
+    var commentData ={
+        commentmessage,
+        name,
+        blogtitle,
+        date:new Date().getTime()
+    }
+
+    db.collection("Comment").doc().set(commentData).catch(function(error) {
+        console.error("Error adding document: ", error);
+    }).then(function(){
+        alert('successful comment sent!');
+        // window.location.href="index.html";
     });
+});
+    });
+
+ 
