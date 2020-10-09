@@ -110,9 +110,20 @@
             console.log(childData);
 
             var username = childData.Username;
-            sessionStorage.setItem("username", username);  
-            console.log(username);    
-            window.location.href="index.html";
+            var role =childData.Role;
+            var photo = childData.photo;
+            if(role === 'guest'){
+                sessionStorage.setItem("username", username);  
+                console.log(username);    
+                window.location.href="index.html";
+            }
+            else if(role === 'admin'){
+                sessionStorage.setItem("username", username);  
+                sessionStorage.setItem("photo", photo);  
+                console.log(username);    
+                window.location.href="admin/dashboard.html";
+            }
+           
             });
 
        });

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/formvalidation.css">
+    
 </head>
 <body style="background: rgba(40, 75, 124, 0.96);">
     <nav class="">
@@ -117,10 +118,13 @@ form.addEventListener('submit', (e) => {
             Username: username,
             Email: email,
             Role:'guest',
-            Password: password
+            Password: password,
+            photo:'',
         }).then(result => {
-            console.log("Successfull Sign up " + username);
-            window.location.href="login.html";
+            sessionStorage.setItem("username", username); 
+            console.log("Successfull Sign up ", username);
+            window.location.href="index.html";
+            password.reset();
         });
     });
 });
