@@ -23,7 +23,8 @@ db.collection('RegisteredUser').get().then(function(snapshot){
             <td>${childData.Username}</td>
             <td>${childData.Email}</td>
             <td>
-                <a href="#deleteUser" class="icon" onclick="deleteUser('${childUID}')"><img src="../assets/delete.png" alt="" ></a>
+                <a href="#deleteUser" class="icon" onclick="deleteUser('${childUID}')"><i class="fas fa-user-tie"></i></a>
+                <a href="#deleteUser" class="icon" onclick="promoteUser('${childUID}')"><i class="fas fa-trash-alt"></i></a>
             </td>
         </tr>     
         `;

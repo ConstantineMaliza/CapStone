@@ -36,7 +36,7 @@
                 <a  href="createblog.html">Create Blog</a>
                 <a href="viewblog.html">View your Blog</a>
                 <a href="viewallblog.html">View all Blog</a>
-                <a class="active" href="profileedit.html">Edit profile</a>
+                <a class="" href="profileedit.html">Edit profile</a>
                 <a href="index.html">Logout</a>
               </div>
            </div>
@@ -46,29 +46,29 @@
                 <h1 style="color: rgb(0, 0, 0)">Respond message</h1>
 
               </div>
-            <form action="">
+            <form action="" id="respondForm">
                 <div class="row createblog">
                     <div class="col-12 col-s-12 blog">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Respond Message to <span>Peter pan</span></h4>
+                                <h4>Respond Message to <span id="respondedname">Peter pan</span></h4>
                             </div>
                             <div class="card-body">
                                 <div class="">
                                     <label for="">previous message</label><br>
-                                    <textarea name="" id="" cols="30" rows="4"
+                                    <textarea name="querymessage" id="querymessage" cols="30" rows="4" disabled
                                         placeholder="At one time or another, as a developer,we've all found ourselves hopelessly stuck on a coding issue.."
                                         style="border-radius: 5px;"></textarea><br>
                                     <label for="">Respond</label><br>
-                                    <textarea name="" id="" cols="30" rows="4"
-                                        placeholder="At one time or another, as a developer,we've all found ourselves hopelessly stuck on a coding issue.."
+                                    <textarea name="responds" id="responds" cols="30" rows="4"
+                                        placeholder=""
                                         style="border-radius: 5px;"></textarea><br>
                                 </div>
 
                             </div>
                         </div>
                         <div class="submit">
-                            <a href="">Publish</a>
+                            <button>Reply</button>
                         </div>
                     </div>
                 </div>
@@ -79,10 +79,18 @@
    
     <div class="footer">
         <ul>
-            <li><a href=""><img src="assets/facebook.png" alt=""></a></li>
-            <li><a href=""><img src="assets/twitter.png" alt=""></a></li>
+            <li><a href=""><img src="../assets/facebook.png" alt=""></a></li>
+            <li><a href=""><img src="../assets/twitter.png" alt=""></a></li>
         </ul>
         
      </div>
+     <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-storage.js"></script>
+     <script src="../js/firebase.js"></script>
+     <script src="js/respond.js"></script>
+     
+     
 </body>
 </html>

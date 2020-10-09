@@ -23,8 +23,8 @@ db.collection("Blog").get().then(function(snapshot) {
             <td>${childData.content}</td>
             <td>22/8/2020</td>
             <td>
-            <a href="#edit" class="icon" style="color: white;" onclick="edit('${childUID}')"><img src="../assets/edit.png" alt="" ></a>
-            <a href="#deleteBlog" class="icon" onclick="deleteBlog('${childUID}')"><img src="../assets/delete.png" alt="" ></a>
+            <a href="#edit" class="icon" onclick="edit('${childUID}')"><i class="fas fa-edit"></i></a>
+            <a href="#deleteBlog" class="icon" onclick="deleteBlog('${childUID}')"><i class="fas fa-trash-alt"></i></a>
             </td>
             </tr>        
         `;

@@ -23,7 +23,7 @@ db.collection('Comment').get().then(function(snapshot){
             <td>${childData.commentmessage}</td>
             <td>${date}</td>
             <td>
-                <a href="#deleteComment" class="icon" onclick="deleteComment('${childUID}')"><img src="../assets/delete.png" alt="" ></a>
+                <a href="#deleteComment" class="icon" onclick="deleteComment('${childUID}')"><i class="fas fa-trash-alt"></i></a>
             </td>
         </tr>    
         `;

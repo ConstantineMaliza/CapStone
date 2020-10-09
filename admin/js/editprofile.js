@@ -52,7 +52,7 @@ profile.addEventListener('submit', (e) =>{
     db.collection("RegisteredUser").doc(uid).update(profileData).catch(function(error) {
         console.error("Error adding document: ", error);
     }).then(function(){
-        alert('successful publish!');
+        console.log('successful publish!');
         window.location.href="dashboard.html";
     });
 
