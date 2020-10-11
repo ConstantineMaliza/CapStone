@@ -6,8 +6,9 @@
     <title>Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,400;1,600;1,900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/admin.css">
-    <link rel="stylesheet" href="../fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../fontawesome-free//css/all.min.css">
    
     
 </head>
@@ -43,19 +44,19 @@
            <div class="col-10 col-s-10 col-m-4 content table">
             <div style="text-align: center;padding:10px 0 10px 0;margin-top: 3%;">
                 <a href="dashboard.html" style="color: rgb(16, 0, 245); font-size: 20px;"> Back</a>
-                <h1 style="color: rgb(0, 0, 0)">Register users</h1>
+                <h1 style="color: rgb(0, 0, 0)">Comments</h1>
 
               </div>
               <table>
                 <tr>
                     <th>N0</th>
-                    <th>Profile pictures</th>
-                    <th>Names </th>
-                    <th>Email</th>
-                    <th>Role</th>
+                    <th>Names</th>
+                    <th>Blog title</th>
+                    <th>Comments</th>
+                    <th>date</th>
                     <th>Action</th>
                 </tr>
-                <tbody id="users">
+                <tbody id="comments">
                     
                 </tbody>
             </table>
@@ -75,7 +76,7 @@
      <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
      <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-storage.js"></script>
      <script src="../js/firebase.js"></script>
-     <script src="js/registereduser.js"></script>
+     <script src="js/comment.js"></script>
      <script src="js/init.js"></script>
 </body>
 </html>

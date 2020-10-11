@@ -6,7 +6,8 @@ if(userUID == null || userUID.length == 0 || userUID == "" || userUID == " " || 
     
     }else {
         document.getElementById('username').innerHTML=sessionStorage.getItem('username');
-        document.getElementById('profilepic').src=sessionStorage.getItem('photo');
+       
+      
         console.log(sessionStorage.getItem('photo'));
                //logout
             const logout = document.querySelector("#logoutprofile");
@@ -17,6 +18,12 @@ if(userUID == null || userUID.length == 0 || userUID == "" || userUID == " " || 
                     window.location.href="../index.html";
                 })
             });
-    
+            db.collection('RegisteredUser').doc(userUID).get().then(function(snapshot){
+                var childData = snapshot.data();
+                if(childData.photo){
+                    
+                }
+                document.getElementById('profilepic').src=childData.photo;
+            });
     }
     

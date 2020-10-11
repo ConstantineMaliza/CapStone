@@ -40,26 +40,6 @@ db.collection("Blog").get().then(function(snapshot) {
             }
             
         }
-        else{
-            html+=`
-            <tr>
-                <td>${i}</td>
-                <td><img src="${childData.photo}" alt="" srcset=""></td>
-                <td>${childData.title}</td>
-                <td>${childData.content}</td>
-                <td>22/8/2020</td>
-                <td>
-                <a href="#edit" class="icon" onclick="edit('${childUID}')"><i class="fas fa-edit"></i></a>
-                <a href="#deleteBlog" class="icon" onclick="deleteBlog('${childUID}')"><i class="fas fa-trash-alt"></i></a>
-                </td>
-                </tr>        
-            `;
-            htmlAll = html + htmlAll;
-            if(t == childCounts) {
-            document.getElementById("blogall").innerHTML=htmlAll;
-     
-            }
-        }
     
     });
 });
@@ -82,9 +62,9 @@ function edit(childUID){
   window.location.href="updateblog.html?postuid="+childUID;
 }
 
-// count blog
-db.collection("Blog").get().then(function(snapshot) {
-    var childCounts = snapshot.size;
-    document.getElementById("countblog").innerHTML=childCounts;
+//count blog
+// db.collection("Blog").get().then(function(snapshot) {
+//     var childCounts = snapshot.size;
+//     document.getElementById("countblog").innerHTML=childCounts;
 
-});
+// });

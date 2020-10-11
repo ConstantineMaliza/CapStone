@@ -20,10 +20,10 @@
                 <img src="../assets/logo.png" alt="">
             </label>
            <ul>
-               <li><a href="" id="username">username</a></li>
+               <li><a href="">username</a></li>
            </ul>
            <label class="profile">
-            <img src="" alt="" id="profilepic">
+            <img src="../assets/Ellipse 5.png" alt="">
             
         </label>
         </div>
@@ -36,52 +36,39 @@
                 <a  href="createblog.html">Create Blog</a>
                 <a href="viewblog.html">View your Blog</a>
                 <a href="viewallblog.html">View all Blog</a>
-                <a class="active" href="profileedit.html">Edit profile</a>
-                <a href="#" id="logoutprofile">Logout</a>
+                <a class="" href="profileedit.html">Edit profile</a>
+                <a href="index.html">Logout</a>
               </div>
            </div>
            <div class="col-10 col-s-10 col-m-5 content">
             <div style="text-align: center;padding:10px 0 10px 0;">
                 <a href="dashboard.html" style="color: rgb(16, 0, 245); font-size: 20px;"> Back</a>
-                <h1 style="color: rgb(0, 0, 0)">Edit your profile</h1>
+                <h1 style="color: rgb(0, 0, 0)">Respond message</h1>
 
               </div>
-            <form action="" id="editprofile">
+            <form action="" id="respondForm">
                 <div class="row createblog">
-                    <div class="col-4 col-s-4 blog">
+                    <div class="col-12 col-s-12 blog">
                         <div class="card">
                             <div class="card-header">
-                                <h4>change Profile Image</h4><br>
-                                <input type="file" name="" id="inputfile">
-                            </div>
-                            <div class="card-body">
-                                <img src="" class="image" id="imageFolder" alt="" style="height: 30vh;object-fit: cover;">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-8 col-s-8 blog">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>user information</h4>
+                                <h4>Respond Message to <span id="respondedname">Peter pan</span></h4>
                             </div>
                             <div class="card-body">
                                 <div class="">
-                                    <label for="">Change username</label><br>
-                                    <input type="text" name="name" id="name" 
-                                        style="border-radius: 5px;"><br>
-                                    <label for="">Email</label><br>
-                                    <input type="email" name="email" id="email" disabled
-                                    style="border-radius: 5px;"><br>
-                                    <label for="">Password</label><br>
-                                    <input type="password" name="password" id="password" disabled
-                                    style="border-radius: 5px;"><br>
+                                    <label for="">previous message</label><br>
+                                    <textarea name="querymessage" id="querymessage" cols="30" rows="4" disabled
+                                        placeholder="At one time or another, as a developer,we've all found ourselves hopelessly stuck on a coding issue.."
+                                        style="border-radius: 5px;"></textarea><br>
+                                    <label for="">Respond</label><br>
+                                    <textarea name="responds" id="responds" cols="30" rows="4"
+                                        placeholder=""
+                                        style="border-radius: 5px;"></textarea><br>
                                 </div>
 
                             </div>
                         </div>
                         <div class="submit">
-                            <button>Publish</button>
-                            
+                            <button>Reply</button>
                         </div>
                     </div>
                 </div>
@@ -102,8 +89,8 @@
      <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
      <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-storage.js"></script>
      <script src="../js/firebase.js"></script>
-     <script src="js/editprofile.js"></script>
-     <script src="js/init.js"></script>
-
+     <script src="js/respond.js"></script>
+     
+     
 </body>
 </html>

@@ -1,5 +1,5 @@
+var userEmail = sessionStorage.getItem("userEmail");
 
-var userUID = sessionStorage.getItem("userUID");
 const blog = document.querySelector('#createBlog');
 
 var photo="";
@@ -34,9 +34,10 @@ blog.addEventListener('submit', (e) =>{
         title,
         content,
         photo,
-        userUID,
+        userEmail,
         date:new Date().getTime()
     }
+    
     db.collection("Blog").doc().set(blogData).catch(function(error) {
         console.error("Error adding document: ", error);
     }).then(function(){

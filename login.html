@@ -53,7 +53,7 @@
                             <input type="password" placeholder="password" id="pass" required/>
                             <button type="submit">login</button>
                             <p class="message">Not registered? <a href="signup.html">Create an account</a></p>
-                            <p class="message"> <a href="./admin/dashboard.html">Login as Admin</a></p>
+                            
                         </form>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
         //    window.location.href="admin/dashboard.html"
            const uid = cred.user.uid;
 
-           sessionStorage.setItem("userUID", uid);
+           
 
            db.collection("RegisteredUser").doc(uid).get().then( function(snapshot){
   
@@ -111,15 +111,20 @@
 
             var username = childData.Username;
             var role =childData.Role;
-            var photo = childData.photo;
+            var email = childData.Email;
+            sessionStorage.setItem("username", username);  
             if(role === 'guest'){
+                sessionStorage.setItem("userUID", uid);
+                sessionStorage.setItem("userEmail", email);
                 sessionStorage.setItem("username", username);  
                 console.log(username);    
-                window.location.href="index.html";
+                window.location.href="guest/dashboard.html";
             }
             else if(role === 'admin'){
+                sessionStorage.setItem("userUID", uid);
+                sessionStorage.setItem("userEmail", email);
                 sessionStorage.setItem("username", username);  
-                sessionStorage.setItem("photo", photo);  
+               
                 console.log(username);    
                 window.location.href="admin/dashboard.html";
             }

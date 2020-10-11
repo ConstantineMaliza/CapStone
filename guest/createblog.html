@@ -33,55 +33,47 @@
            <div class="col-2 col-s-2">
             <div class="sidenav">
                 <a href="dashboard.html">Dashboard</a>
-                <a  href="createblog.html">Create Blog</a>
+                <a class="active" href="createblog.html">Create Blog</a>
                 <a href="viewblog.html">View your Blog</a>
                 <a href="viewallblog.html">View all Blog</a>
-                <a class="active" href="profileedit.html">Edit profile</a>
+                <a href="profileedit.html">Edit profile</a>
                 <a href="#" id="logoutprofile">Logout</a>
               </div>
            </div>
            <div class="col-10 col-s-10 col-m-5 content">
-            <div style="text-align: center;padding:10px 0 10px 0;">
-                <a href="dashboard.html" style="color: rgb(16, 0, 245); font-size: 20px;"> Back</a>
-                <h1 style="color: rgb(0, 0, 0)">Edit your profile</h1>
-
-              </div>
-            <form action="" id="editprofile">
+            <form action="" id="createBlog">
                 <div class="row createblog">
                     <div class="col-4 col-s-4 blog">
                         <div class="card">
                             <div class="card-header">
-                                <h4>change Profile Image</h4><br>
+                                <h4>Upload Blog Image</h4><br>
                                 <input type="file" name="" id="inputfile">
                             </div>
                             <div class="card-body">
-                                <img src="" class="image" id="imageFolder" alt="" style="height: 30vh;object-fit: cover;">
+                                <img src="" id="imageFolder" alt="" accept="image/*">
                             </div>
                         </div>
                     </div>
                     <div class="col-8 col-s-8 blog">
                         <div class="card">
                             <div class="card-header">
-                                <h4>user information</h4>
+                                <h4>Detail Information</h4>
                             </div>
                             <div class="card-body">
                                 <div class="">
-                                    <label for="">Change username</label><br>
-                                    <input type="text" name="name" id="name" 
+                                    <label for="">Title of blog</label><br>
+                                    <input type="text" name="" id="blogtitle" 
                                         style="border-radius: 5px;"><br>
-                                    <label for="">Email</label><br>
-                                    <input type="email" name="email" id="email" disabled
-                                    style="border-radius: 5px;"><br>
-                                    <label for="">Password</label><br>
-                                    <input type="password" name="password" id="password" disabled
-                                    style="border-radius: 5px;"><br>
+                                    <label for="">Description</label><br>
+                                    <textarea name="" id="blogcontent" cols="30" rows="4"
+                                       
+                                        style="border-radius: 5px;"></textarea>
                                 </div>
 
                             </div>
                         </div>
                         <div class="submit">
-                            <button>Publish</button>
-                            
+                            <button type="submit">Publish</button>
                         </div>
                     </div>
                 </div>
@@ -102,8 +94,8 @@
      <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-firestore.js"></script>
      <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-storage.js"></script>
      <script src="../js/firebase.js"></script>
-     <script src="js/editprofile.js"></script>
      <script src="js/init.js"></script>
-
+     <script src="js/createblog.js"></script>
+    
 </body>
 </html>
