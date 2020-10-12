@@ -20,9 +20,6 @@ if(userUID == null || userUID.length == 0 || userUID == "" || userUID == " " || 
             });
             db.collection('RegisteredUser').doc(userUID).get().then(function(snapshot){
                 var childData = snapshot.data();
-                if(childData.photo){
-                    
-                }
                 document.getElementById('profilepic').src=childData.photo;
             });
     }

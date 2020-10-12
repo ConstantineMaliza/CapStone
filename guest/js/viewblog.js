@@ -1,6 +1,6 @@
 var userEmail = sessionStorage.getItem("userEmail");
 
-db.collection("Blog").get().then(function(snapshot) {
+db.collection("Blog").where("userEmail","==",userEmail).get().then(function(snapshot) {
     var htmlAll = "";
     var childCounts = snapshot.size;
     
@@ -17,9 +17,8 @@ db.collection("Blog").get().then(function(snapshot) {
           t++;
           i--;
         var html="";
-        if(userEmail === childData.userEmail){
-            
-         console.log(childData.userEmail);
+       
+        //  console.log(childData.userEmail);
             html+=`
             <tr>
                 <td>${i}</td>
@@ -39,7 +38,7 @@ db.collection("Blog").get().then(function(snapshot) {
      
             }
             
-        }
+            
     
     });
 });
@@ -63,8 +62,8 @@ function edit(childUID){
 }
 
 //count blog
-// db.collection("Blog").get().then(function(snapshot) {
-//     var childCounts = snapshot.size;
-//     document.getElementById("countblog").innerHTML=childCounts;
+db.collection("Blog").where("userEmail","==",userEmail).get().then(function(snapshot) {
+    var childCounts = snapshot.size;
+    document.getElementById("countblog").innerHTML=childCounts;
 
-// });
+});

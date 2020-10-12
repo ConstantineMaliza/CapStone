@@ -1,0 +1,22 @@
+    .alert-box {
+	padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;  
+}
+
+.success {
+    color: #3c763d;
+    font-weight: bold;
+    background-color: #000000;
+    border-color:#3c763d;
+    display: none;
+}
+#yes{
+    color: #3c763d; 
+    border: 1px transparent ; 
+    border-radius: 50%; 
+    background-color: #ffffff; 
+    padding: 3px 7px;
+    margin: 0 5px
+}

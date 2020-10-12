@@ -199,6 +199,7 @@ td a:hover{
 tr:hover{
     background-color: rgba(40, 75, 124, 0.96);
     color: white;
+    transition: 5ms
 }
 tr th{
     background-color: rgba(40, 75, 124, 0.96);

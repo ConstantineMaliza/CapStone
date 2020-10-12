@@ -23,7 +23,9 @@ contactform.addEventListener('submit',(e) =>{
     message.set(querryData).catch(function(error) {
         console.error("Error adding document: ", error);
     }).then(function(){
-        alert('successful message sent!');
+
+        $( "div.success" ).fadeIn( 300 ).delay( 1500 ).fadeOut( 400 );
+        contactform.reset();
         // window.location.href="index.html";
     });
 });
