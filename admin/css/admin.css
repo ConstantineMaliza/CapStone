@@ -235,7 +235,7 @@ tr th{
     transition: all 0.3 ease;
     cursor: pointer;
   }
-  .submit a:hover{
+  .submit button:hover{
     background-color: #0a4677;
   }
   [class*="col-"] {

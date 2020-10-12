@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/formvalidation.css">
-    
+
 </head>
+
 <body style="background: rgba(40, 75, 124, 0.96);">
     <nav class="">
         <div class=" container">
@@ -30,7 +31,7 @@
                 <li><a href="blog.html" class="">Blog</a></li>
                 <li><a href="contact.html" class="">Contact</a></li>
                 <li><a href="signup.html" class="active">Sign up</a></li>
-                <li><a href="" style="text-transform: capitalize;"id="username">username</a></li>
+                <li><a href="" style="text-transform: capitalize;" id="username">username</a></li>
                 <li><a href="#" class="" id="logout">Logout</a></li>
 
             </ul>
@@ -45,28 +46,31 @@
         </div>
         <div class="login-page">
             <div class="form">
-               
+
                 <form class="register-form" id="registerForm">
                     <div class="input-box">
-                    <input type="text" placeholder="name" id="username" name="username" required /> 
-                    <span id="name" class="invalid" ></span>
+                        <input type="text" placeholder="name" id="username" name="username" required />
+                        <span id="name" class="invalid"></span>
                     </div>
                     <!-- <div class="message" id="emailError"></div> -->
                     <div class="input-box">
-                    <input type="text"  placeholder="email address" id="email" name="email" required />
-                    <span id="text" class="invalid" ></span>
+                        <input type="text" placeholder="email address" id="email" name="email" required />
+                        <span id="text" class="invalid"></span>
                     </div>
                     <div class="input-box">
-                    <input type="password" placeholder="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required  />
-                    <span id="message">
-                        <p>Password must contain the following:</p>
-                        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-                        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-                        <p id="number" class="invalid">A <b>number</b></p>
-                        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
-                    </span>
+                        <input type="password" placeholder="password" id="password" name="password"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required />
+                        <span id="message">
+                            <p>Password must contain the following:</p>
+                            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                            <p id="number" class="invalid">A <b>number</b></p>
+                            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                        </span>
                     </div>
-                    <button type="submit"  >signup</button>
+                    <input type="password" name="confirmpassword" id="confirmpassword" placeholder="confirmpassword">
+                    <div id="pError">password does match</div>
+                    <button type="submit">signup</button>
                     <p class="message">Already registered? <a href="login.html">Sign In</a></p>
                 </form>
             </div>
@@ -89,47 +93,54 @@
     <script src="js/init.js"></script>
     <script>
 
-// Sign Up Form
-const form = document.querySelector('#registerForm');
+        // Sign Up Form
+        const form = document.querySelector('#registerForm');
 
-const pError = document.querySelector('#pError');
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+        const pError = document.querySelector('#pError');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
 
-    const username = form['username'].value;
+            const username = form['username'].value;
 
-    const email = form['email'].value;     
-    const password = form['password'].value;
-   
+            const email = form['email'].value;
+            const password = form['password'].value;
+            const confirmpassword = form['confirmpassword'].value;
 
-    auth.createUserWithEmailAndPassword(email, password).catch(function (error) {
+            if (password != confirmpassword) {
+                pError.style.display = "block";
+                // console.log("password does not match");
+                return;
+            }
 
-        var errorCode = error.code;
-        var errorMessage = error.message;
 
-        alert(errorCode + " - " + errorMessage);
+            auth.createUserWithEmailAndPassword(email, password).catch(function (error) {
 
-    }).then(cred => {
-        const uid = cred.user.uid;
-        console.log(uid);
-        db.collection("RegisteredUser").doc(uid).set({
+                var errorCode = error.code;
+                var errorMessage = error.message;
 
-            User_id: uid,
-            Username: username,
-            Email: email,
-            Role:'guest',
-            Password: password,
-            photo:'',
-        }).then(result => {
-            sessionStorage.setItem("username", username); 
-            console.log("Successfull Sign up ", username);
-            window.location.href="login.html";
-            password.reset();
+                alert(errorCode + " - " + errorMessage);
+
+            }).then(cred => {
+                const uid = cred.user.uid;
+                console.log(uid);
+                db.collection("RegisteredUser").doc(uid).set({
+
+                    User_id: uid,
+                    Username: username,
+                    Email: email,
+                    Role: 'guest',
+                    Password: password,
+                    photo: '',
+                }).then(result => {
+                    sessionStorage.setItem("username", username);
+                    console.log("Successfull Sign up ", username);
+                    window.location.href = "guest/dashboard.html";
+                    password.reset();
+                });
+            });
         });
-    });
-});
 
- 
+
     </script>
 </body>
 
