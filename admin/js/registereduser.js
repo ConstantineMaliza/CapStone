@@ -1,6 +1,6 @@
 
 
-db.collection('RegisteredUser').get().then(function (snapshot) {
+db.collection('RegisteredUser').onSnapshot(function (snapshot) {
 
     var htmlAll = "";
     var childCounts = snapshot.size;
@@ -16,9 +16,10 @@ db.collection('RegisteredUser').get().then(function (snapshot) {
         t++;
         i--;
         var html = "";
-        // if(childData.Role ==="admin"){
-        //     document.getElementById("admin").style.color= "green";
-        // }
+        let style = "";
+        if (childData.Role === "admin") {
+            style = "color:red;";
+        }
         html += `
         <tr>
             <td>${i}</td>
@@ -27,7 +28,7 @@ db.collection('RegisteredUser').get().then(function (snapshot) {
             <td>${childData.Email}</td>
             <td>${childData.Role}</td>
             <td>
-                <a href="#User" id="admin" class="icon" onclick="promoteUser(this, 'red')"><i class="fas fa-user-tie"></i></a>
+                <a href="#User" id="admin" class="icon" onclick="promoteUser(this, '${childUID}')"><i class="fas fa-user-tie" style ="${style}"></i></a>
                 <a href="#deleteUser" class="icon" onclick="deleteUser('${childUID}')"><i class="fas fa-trash-alt"></i></a>
               
             </td>
@@ -43,29 +44,18 @@ db.collection('RegisteredUser').get().then(function (snapshot) {
     });
 });
 
-function deleteUser(childUID, user_id) {
+function deleteUser(childUID) {
 
-    db.collection("RegisteredUser").doc(user_id).delete().then(function () {
-
-        alert("sucessfully deleted");
-
-        var element = document.getElementById(childUID);
-
-        document.querySelector("#users").removeChild(element);
-
-    });
+    db.collection("RegisteredUser").doc(childUID).delete().catch(console.log);
 
 }
-function promoteUser(elmnt, clr) {
-    elmnt.style.color = clr;
+function promoteUser(element, childUID) {
+    element.style.color = 'red';
 
-    // db.collection("RegisteredUser").get().then(function (snapshot) {
-    //     snapshot.forEach(function (doc) {
-    //         var childData = doc.data();
-    //         console.log(childData.Role);
-    //         document.getElementById("admin").style.color = "red";
-    //     });
-    // });
+    db.collection("RegisteredUser").doc(childUID).update({
+        Role: 'admin'
+    }).catch(console.log);
+
 }
 /// count 
 
